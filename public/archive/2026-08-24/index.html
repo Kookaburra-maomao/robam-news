@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI未来厨房新闻报 - 2026-08-24</title>
+  <style>
+    :root {
+      --paper: #f4ecd9;
+      --paper-dark: #ddcfad;
+      --ink: #17120f;
+      --muted: #675d50;
+      --rule: #211c17;
+      --red: #9a201d;
+      --wash: rgba(255,255,255,0.36);
+    }
+
+    * { box-sizing: border-box; }
+    html { scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255,255,255,0.52), transparent 24rem),
+        linear-gradient(135deg, #cbb88e 0%, #f8f1e0 45%, #cdbb92 100%);
+      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar { display: none; }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .page {
+      width: min(1060px, calc(100vw - 28px));
+      margin: 24px auto;
+      padding: 34px 44px 40px;
+      background:
+        linear-gradient(rgba(255,255,255,0.17), rgba(0,0,0,0.018)),
+        repeating-linear-gradient(90deg, rgba(48,38,24,0.028) 0 1px, transparent 1px 6px),
+        var(--paper);
+      border: 1px solid rgba(36,28,18,0.48);
+      box-shadow: 0 26px 68px rgba(39,30,18,0.24);
+    }
+
+    .sans {
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .masthead {
+      padding: 20px 0 18px;
+      text-align: center;
+      border-bottom: 3px solid var(--rule);
+    }
+
+    .masthead h1 {
+      margin: 0;
+      font-size: clamp(42px, 7.6vw, 82px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .issue-line {
+      padding: 12px 0 15px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .editor-note {
+      margin: 18px 0 26px;
+      padding: 16px 18px;
+      border-left: 7px solid var(--red);
+      background: var(--wash);
+      color: #2b231c;
+      font-size: 20px;
+      line-height: 1.62;
+      font-weight: 700;
+    }
+
+    .source-strip {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(33,28,23,0.45);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.58;
+      font-weight: 400;
+    }
+
+    .story {
+      padding: 30px 0 32px;
+      border-top: 3px solid var(--rule);
+    }
+
+    .story:first-of-type { padding-top: 24px; }
+
+    .story-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .rank {
+      width: 62px;
+      height: 62px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--rule);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .kicker {
+      margin: 2px 0 8px;
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(32px, 4.3vw, 50px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 930px;
+      margin: 16px 0 18px;
+      font-size: 22px;
+      line-height: 1.48;
+      font-weight: 900;
+      color: #302820;
+    }
+
+    .news-photo {
+      margin: 0 0 16px;
+      border: 2px solid var(--rule);
+      background: var(--paper-dark);
+    }
+
+    .news-photo img {
+      display: block;
+      width: 100%;
+      height: clamp(300px, 42vw, 455px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .news-photo .casdon-focus { object-position: center 52%; }
+    .news-photo .kitchen-focus { object-position: center 50%; }
+    .news-photo .unitree-focus { object-position: center 43%; }
+
+    .caption {
+      padding: 9px 11px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      background: rgba(244,236,217,0.88);
+    }
+
+    .story-content {
+      display: block;
+      max-width: 930px;
+      margin-top: 18px;
+    }
+
+    .story-content p {
+      margin: 0 0 13px;
+      font-size: 21px;
+      line-height: 1.66;
+      font-weight: 600;
+    }
+
+    .brief-box {
+      margin-top: 14px;
+      border-left: 7px solid var(--red);
+      padding: 13px 16px;
+      background: var(--wash);
+      font-size: 18px;
+      line-height: 1.62;
+      color: #312820;
+      font-weight: 600;
+    }
+
+    .brief-box b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--red);
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .meta span {
+      padding: 5px 8px;
+      border-left: 4px solid var(--red);
+      background: rgba(255,255,255,0.34);
+    }
+
+    .footer {
+      margin-top: 8px;
+      padding-top: 18px;
+      border-top: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100vw - 16px, 760px);
+        margin: 8px auto;
+        padding: 22px 18px 30px;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        font-size: 13px;
+      }
+
+      .masthead h1 {
+        font-size: clamp(38px, 13vw, 62px);
+      }
+
+      .editor-note {
+        font-size: 18px;
+      }
+
+      .story-head {
+        grid-template-columns: 54px 1fr;
+        gap: 12px;
+      }
+
+      .rank {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: clamp(28px, 8vw, 40px);
+      }
+
+      .dek {
+        font-size: 20px;
+      }
+
+      .news-photo img {
+        height: clamp(245px, 58vw, 360px);
+      }
+
+      .story-content p {
+        font-size: 19px;
+        line-height: 1.62;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="topbar sans">
+        <span>AI DAILY · 未来厨房 / 智能硬件 / 具身智能</span>
+        <span>2026年8月24日 · 星期一</span>
+      </div>
+      <div class="masthead">
+        <h1>AI未来厨房新闻报</h1>
+      </div>
+      <div class="issue-line sans">总第 042 期 · 新闻馆重启第 001 期 · 覆盖 8 月 24 日公开资讯与近24小时高价值线索</div>
+    </header>
+
+    <section class="editor-note">
+      今天的主线是“AI 从联网功能走进厨房硬件系统”：厨电品牌开始把智能体、视觉感知、分屏交互和空间设计打包成可交付方案；家庭机器人也在 WRC 现场把“做早餐、洗衣服”这类家务拆成可验证动作。
+      <div class="source-strip sans">检索方向：智能厨电硬件、AI 厨具交互、厨房空间设计、具身智能到家、36氪/雷科技 WRC 线索。排序参考：相关性、时效性、可落地性、前瞻性、配图真实性。</div>
+    </section>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">1</div>
+        <div>
+          <div class="kicker sans">厨房智能硬件 · AI厨电交互</div>
+          <h2>凯度让“小紫”住进厨电：AI智能体开始接管蒸烤、净饮、洗碗与烟灶</h2>
+          <div class="meta sans">
+            <span>来源：百姓家电网 / 新浪科技</span>
+            <span>时间：2026-08-24 11:09</span>
+            <span>评分：93</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">凯度发布“紫科技2.0 / 漫生活2.0”，首发幂境全隐嵌智能厨电套系，并展示自研 AI 智能体“小紫”的体验店实景交互。</p>
+      <figure class="news-photo">
+        <img class="casdon-focus" src="images/casdon_xiaozi.png" alt="凯度 AI 智能体小紫与厨电产品现场图">
+        <figcaption class="caption sans">凯度发布会现场，“小紫”与厨电套系同场展示。图片来源：百姓家电网 / 新浪科技。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>这条新闻最值得看的是“AI 不只停在 App 里”。凯度把“小紫”嵌入蒸烤、净饮、洗碗机、烟灶等产品，覆盖语音交互、烹饪答疑、饮水预约、滤芯提醒、洗碗辅助等场景。</p>
+        <p>幂境套系采用双 TFT 分屏：左屏做设备操控，右屏承载 AI 交互、菜谱和服务信息。全隐嵌、无拉手、电动开门、云水纹天际线等设计，也把“厨房工业设计”和“智能交互入口”绑到了一起。</p>
+        <div class="brief-box sans"><b>小编有话说</b>这比单点语音控制更有参考价值：AI 厨电真正难的不是“能聊天”，而是把菜单、烹饪参数、清洁维护和空间美学放进一个稳定的硬件系统里。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">2</div>
+        <div>
+          <div class="kicker sans">行业趋势 · 智慧厨房系统</div>
+          <h2>中国家电网：国补退场后，厨电竞争转向“好房子 + AI智慧大脑”</h2>
+          <div class="meta sans">
+            <span>来源：中国家电网</span>
+            <span>时间：2026-08-24 09:00</span>
+            <span>评分：88</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">厨电行业短期承压，但企业正在从价格内卷转向场景价值：旧房局改、全案交付、AI 主动感知和跨设备协同成为新抓手。</p>
+      <figure class="news-photo">
+        <img class="kitchen-focus" src="images/vatti_kitchen.jpg" alt="华帝净洁厨房空间实景图">
+        <figcaption class="caption sans">智能厨房空间实景，用于呈现厨电从单品向场景化方案迁移。图片来源：中国家电网历史图库。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>中国家电网今天的行业稿指出，国补退场和房地产调整让厨电市场进入压力期；但“好房子”建设与 AI 技术规模化落地，也在重塑行业竞争逻辑。</p>
+        <p>文章列举了多条落地路径：海尔强化高端套系和 AI 场景体验；方太推动人、设备、场景协同；博西把 AI 融入嵌入式厨电；万和、万宝分别在烟机智能变频、体感控制上做大众化落地；华帝则强调全品类协同与科技隐形化。</p>
+        <div class="brief-box sans"><b>小编有话说</b>这一条的价值在于提醒我们：未来厨房不是“单品智能”堆叠，而是围绕住宅改造、橱柜嵌入、设备协议和主动安全做系统交付。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">3</div>
+        <div>
+          <div class="kicker sans">具身智能 · 家务机器人</div>
+          <h2>WRC现场观察：宇树做早餐、擎朗洗衣服，机器人“到家”开始拆任务</h2>
+          <div class="meta sans">
+            <span>来源：雷科技 WRC 现场观察</span>
+            <span>时间：2026-08-19，今日作为 WRC 延续线索纳入</span>
+            <span>评分：84</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">这不是“一个机器人包办全屋”的故事，而是把做早餐、洗衣、做饮料、收银、配送等动作拆成可演示、可迭代的家庭服务能力。</p>
+      <figure class="news-photo">
+        <img class="unitree-focus" src="images/leikeji_unitree.webp" alt="宇树机器人在WRC现场演示早餐相关动作">
+        <figcaption class="caption sans">宇树机器人在 WRC 现场围绕早餐任务进行演示。图片来源：雷科技现场摄制。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>雷科技在 WRC 现场观察到，家庭场景正在成为机器人厂商集中验证的新方向：宇树把机器人放到早餐任务里，擎朗展示咖啡、甜品、零售、洗衣等“具身社区”场景，京东则展示机器人销售与售后生态。</p>
+        <p>这类演示的启发在于，家庭机器人不会一上来变成全能管家。更可行的路径，是先从一个高频动作切入，让机器人在真实物理世界里练习识别、抓取、移动、按键、放置和错误恢复。</p>
+        <div class="brief-box sans"><b>小编有话说</b>厨房会是家庭机器人的硬考场：油烟、热源、易碎器皿、食材差异和安全边界都很复杂。谁能先把“小任务”做稳，谁才可能慢慢接近真正的家务助手。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">4</div>
+        <div>
+          <div class="kicker sans">厨房空间设计 · 定制厨电</div>
+          <h2>索菲亚启动厨电项目：定制家居开始把“厨房空间”纳入整案交付</h2>
+          <div class="meta sans">
+            <span>来源：新华报业网 / 潮新闻</span>
+            <span>时间：2026-08-24 15:02</span>
+            <span>补充方向：厨房空间设计</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">索菲亚厨电项目启动，线索不在“多卖一个厨电单品”，而在定制家居企业开始把厨电、橱柜、动线和交付体验放到同一个厨房方案里。</p>
+      <figure class="news-photo">
+        <img class="kitchen-focus" src="images/sofia_kitchen_scene.png" alt="索菲亚厨电项目启动峰会现场厨房样板间参观图">
+        <figcaption class="caption sans">索菲亚厨电项目启动峰会现场，参会人员参观厨房样板间。图片来源：新华报业网 / 潮新闻。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>8 月 24 日，新华报业网刊发索菲亚厨电项目启动消息。现场图显示，项目围绕家居美学馆和厨房样板间展开，核心看点是定制品牌把厨房硬装、柜体、厨电嵌入和体验动线一起组织。</p>
+        <p>对厨房空间设计来说，这意味着竞争入口从“产品参数”继续前移到“厨房怎么被规划、怎么被交付”。未来厨电若想进入整案渠道，外观尺寸、安装边界、清洁维护和家装风格适配都会变成产品定义的一部分。</p>
+        <div class="brief-box sans"><b>小编有话说</b>这类新闻很值得跟：厨电品牌做空间，定制品牌做厨电，双方都在抢“厨房方案”的主导权。谁能把设计师、安装和售后打通，谁就更接近真实用户。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">5</div>
+        <div>
+          <div class="kicker sans">厨房品类创新 · 新厨电套系</div>
+          <h2>高端新厨电白皮书发布：蒸烤、净饮、洗碗、咖啡机从参数赛转向“感知价值”</h2>
+          <div class="meta sans">
+            <span>来源：百姓家电网 / 新浪科技</span>
+            <span>时间：2026-08-24 11:09</span>
+            <span>补充方向：厨房品类创新</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">凯度联合 Kantar 发布《2026中国高端新厨电白皮书》，指出新生代消费者对厨电的判断正在从传统参数，转向省心、融入空间和主动理解需求。</p>
+      <figure class="news-photo">
+        <img class="casdon-focus" src="images/casdon_mee_x.png" alt="凯度幂境全隐嵌智能厨电套系现场图">
+        <figcaption class="caption sans">凯度幂境全隐嵌智能厨电套系现场展示。图片来源：百姓家电网 / 新浪科技。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>报道提到，白皮书聚焦 95 后、00 后核心消费群体，在蒸烤箱、洗碗机、净饮机、咖啡机四大品类中，消费者决策时最看重的已转向感知维度。</p>
+        <p>这给品类创新一个清晰信号：新品不再只比“火力、容量、温度范围”，而是要把烹饪、饮水、清洁、收纳和情绪体验组织成连续场景。跨品类套系和可替换模块，会比孤立爆品更能承接高端厨房升级。</p>
+        <div class="brief-box sans"><b>小编有话说</b>品类创新的重点不是堆更多功能，而是把用户不愿意管理的事情接过去。未来的新厨电要能“少打扰、多预判、好融入”。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">6</div>
+        <div>
+          <div class="kicker sans">厨房工业设计 · CMF与交互界面</div>
+          <h2>从无拉手全嵌到双TFT：厨房工业设计正在把“屏幕、材质、隐形化”变成体验入口</h2>
+          <div class="meta sans">
+            <span>来源：百姓家电网 / 新浪科技</span>
+            <span>时间：2026-08-24 11:09</span>
+            <span>补充方向：厨房工业设计</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">凯度幂境套系提出“云水纹天际线设计”“远山灰自然纹理玻璃面板”“全隐全嵌纯平如画”，让工业设计直接参与智能厨电的交互表达。</p>
+      <figure class="news-photo">
+        <img class="kitchen-focus" src="images/casdon_designer_talk.png" alt="凯度发布会现场设计分享图">
+        <figcaption class="caption sans">凯度发布会现场，设计嘉宾围绕家居美学与厨居一体化进行分享。图片来源：百姓家电网 / 新浪科技。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>报道中，凯度把包豪斯“艺术和技术的新统一”延展到“AI科技与艺术的统一”，并用双 TFT 分屏、无拉手全嵌、电动开门、AG 防指纹玻璃等设计，把操作、信息呈现和空间观感合并。</p>
+        <p>这类工业设计变化会影响产品研发节奏：屏幕不只是显示模块，材质不只是外观，嵌入边界不只是安装尺寸。它们共同决定用户是否愿意把智能厨电真正放进开放式、高颜值厨房里。</p>
+        <div class="brief-box sans"><b>小编有话说</b>AI 厨电越往高端走，工业设计越不能滞后。交互入口、面板材质和柜体融合度，会一起决定“智能感”是不是高级。</div>
+      </div>
+    </article>
+
+    <footer class="footer sans">
+      参考来源：
+      <a href="https://finance.sina.com.cn/tech/roll/2026-08-24/doc-inipkrka3034858.shtml">新浪科技 / 百姓家电网</a> ·
+      <a href="https://news.cheaa.com/2026/0824/657720.shtml">中国家电网</a> ·
+      <a href="https://www.leikeji.com/article/78789">雷科技 WRC 现场观察</a> ·
+      <a href="https://www.xhby.net/content/s6a8bec87e4b02a27aa5a2ced.html">新华报业网 / 潮新闻</a>
+      <br>
+      AI编辑部提示：本版已追加厨房空间设计、厨房品类创新、厨房工业设计三类补充线索，仅用于新闻馆历史沉淀。
+    </footer>
+  </main>
+</body>
+</html>
