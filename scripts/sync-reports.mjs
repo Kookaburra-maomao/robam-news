@@ -104,16 +104,16 @@ function copyReferencedAssets(html, sourceDir, destDir) {
 }
 
 function heroForImageRef(ref, date, copiedAssets, previewName) {
-  if (!ref) return previewName ? `/archive/${date}/${previewName}` : "";
+  if (!ref) return previewName ? `archive/${date}/${previewName}` : "";
   const decoded = decodeHtml(ref);
   if (/^(?:[a-z]+:)?\/\//i.test(decoded)) return decoded;
   if (decoded.startsWith("/") || decoded.startsWith("#") || decoded.startsWith("data:")) {
-    return previewName ? `/archive/${date}/${previewName}` : "";
+    return previewName ? `archive/${date}/${previewName}` : "";
   }
 
   const cleanRef = decoded.split("#")[0].split("?")[0];
-  if (copiedAssets.includes(cleanRef)) return `/archive/${date}/${cleanRef}`;
-  return previewName ? `/archive/${date}/${previewName}` : "";
+  if (copiedAssets.includes(cleanRef)) return `archive/${date}/${cleanRef}`;
+  return previewName ? `archive/${date}/${previewName}` : "";
 }
 
 function bestHtml(dir, date) {
@@ -165,7 +165,7 @@ for (const entry of readdirSync(sourceRoot, { withFileTypes: true })) {
     title: "AI未来厨房新闻报",
     summary,
     hero,
-    reportUrl: `/archive/${date}/`,
+    reportUrl: `archive/${date}/`,
     tags,
     articles: articleTags,
   });

@@ -23,8 +23,8 @@ export const reports: NewsReport[] = [
     "issue": "第 043 期",
     "title": "AI未来厨房新闻报",
     "summary": "今天的主线是“AI能力正在进入可交付场景”：厨电行业把好房子、旧改、嵌入式套系和 AI 智慧厨房放到同一张桌上；端侧 AI 芯片开始追求本地大模型推理；机器人则从展台演示转向餐饮、养老与家庭陪伴。",
-    "hero": "/archive/2026-08-25/images/kitchen_space_scene.png",
-    "reportUrl": "/archive/2026-08-25/",
+    "hero": "archive/2026-08-25/images/kitchen_space_scene.png",
+    "reportUrl": "archive/2026-08-25/",
     "tags": [
       "具身智能",
       "厨房智能硬件",
@@ -59,8 +59,8 @@ export const reports: NewsReport[] = [
     "issue": "第 042 期",
     "title": "AI未来厨房新闻报",
     "summary": "今天的主线是“AI 从联网功能走进厨房硬件系统”：厨电品牌开始把智能体、视觉感知、分屏交互和空间设计打包成可交付方案；家庭机器人也在 WRC 现场把“做早餐、洗衣服”这类家务拆成可验证动作。",
-    "hero": "/archive/2026-08-24/images/casdon_xiaozi.png",
-    "reportUrl": "/archive/2026-08-24/",
+    "hero": "archive/2026-08-24/images/casdon_xiaozi.png",
+    "reportUrl": "archive/2026-08-24/",
     "tags": [
       "具身智能",
       "厨房智能硬件",
