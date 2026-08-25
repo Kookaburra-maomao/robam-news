@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI未来厨房新闻报 - 2026-08-25</title>
+  <style>
+    :root {
+      --paper: #f4ecd9;
+      --paper-dark: #ddcfad;
+      --ink: #17120f;
+      --muted: #675d50;
+      --rule: #211c17;
+      --red: #9a201d;
+      --wash: rgba(255,255,255,0.36);
+    }
+
+    * { box-sizing: border-box; }
+    html { scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255,255,255,0.52), transparent 24rem),
+        linear-gradient(135deg, #cbb88e 0%, #f8f1e0 45%, #cdbb92 100%);
+      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar { display: none; }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .page {
+      width: min(1060px, calc(100vw - 28px));
+      margin: 24px auto;
+      padding: 34px 44px 40px;
+      background:
+        linear-gradient(rgba(255,255,255,0.17), rgba(0,0,0,0.018)),
+        repeating-linear-gradient(90deg, rgba(48,38,24,0.028) 0 1px, transparent 1px 6px),
+        var(--paper);
+      border: 1px solid rgba(36,28,18,0.48);
+      box-shadow: 0 26px 68px rgba(39,30,18,0.24);
+    }
+
+    .sans {
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .masthead {
+      padding: 20px 0 18px;
+      text-align: center;
+      border-bottom: 3px solid var(--rule);
+    }
+
+    .masthead h1 {
+      margin: 0;
+      font-size: clamp(42px, 7.6vw, 82px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .issue-line {
+      padding: 12px 0 15px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .editor-note {
+      margin: 18px 0 26px;
+      padding: 16px 18px;
+      border-left: 7px solid var(--red);
+      background: var(--wash);
+      color: #2b231c;
+      font-size: 20px;
+      line-height: 1.62;
+      font-weight: 700;
+    }
+
+    .source-strip {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(33,28,23,0.45);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.58;
+      font-weight: 400;
+    }
+
+    .story {
+      padding: 30px 0 32px;
+      border-top: 3px solid var(--rule);
+    }
+
+    .story:first-of-type { padding-top: 24px; }
+
+    .story-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .rank {
+      width: 62px;
+      height: 62px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--rule);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .kicker {
+      margin: 2px 0 8px;
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(32px, 4.3vw, 50px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 930px;
+      margin: 16px 0 18px;
+      font-size: 22px;
+      line-height: 1.48;
+      font-weight: 900;
+      color: #302820;
+    }
+
+    .news-photo {
+      margin: 0 0 16px;
+      border: 2px solid var(--rule);
+      background: var(--paper-dark);
+    }
+
+    .news-photo img {
+      display: block;
+      width: 100%;
+      height: clamp(300px, 42vw, 455px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .news-photo .kitchen-focus { object-position: center 52%; }
+    .news-photo .chip-focus { object-position: center 50%; }
+    .news-photo .robot-focus { object-position: center 42%; }
+
+    .caption {
+      padding: 9px 11px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      background: rgba(244,236,217,0.88);
+    }
+
+    .story-content {
+      display: block;
+      max-width: 930px;
+      margin-top: 18px;
+    }
+
+    .story-content p {
+      margin: 0 0 13px;
+      font-size: 21px;
+      line-height: 1.66;
+      font-weight: 600;
+    }
+
+    .brief-box {
+      margin-top: 14px;
+      border-left: 7px solid var(--red);
+      padding: 13px 16px;
+      background: var(--wash);
+      font-size: 18px;
+      line-height: 1.62;
+      color: #312820;
+      font-weight: 600;
+    }
+
+    .brief-box b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--red);
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .meta span {
+      padding: 5px 8px;
+      border-left: 4px solid var(--red);
+      background: rgba(255,255,255,0.34);
+    }
+
+    .footer {
+      margin-top: 8px;
+      padding-top: 18px;
+      border-top: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100vw - 16px, 760px);
+        margin: 8px auto;
+        padding: 22px 18px 30px;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        font-size: 13px;
+      }
+
+      .masthead h1 {
+        font-size: clamp(38px, 13vw, 62px);
+      }
+
+      .editor-note {
+        font-size: 18px;
+      }
+
+      .story-head {
+        grid-template-columns: 54px 1fr;
+        gap: 12px;
+      }
+
+      .rank {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: clamp(28px, 8vw, 40px);
+      }
+
+      .dek {
+        font-size: 20px;
+      }
+
+      .news-photo img {
+        height: clamp(245px, 58vw, 360px);
+      }
+
+      .story-content p {
+        font-size: 19px;
+        line-height: 1.62;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="topbar sans">
+        <span>AI DAILY · 未来厨房 / 智能硬件 / 具身智能</span>
+        <span>2026年8月25日 · 星期二</span>
+      </div>
+      <div class="masthead">
+        <h1>AI未来厨房新闻报</h1>
+      </div>
+      <div class="issue-line sans">总第 043 期 · 覆盖 8 月 25 日公开资讯与近24小时高价值线索</div>
+    </header>
+
+    <section class="editor-note">
+      今天的主线是“AI能力正在进入可交付场景”：厨电行业把好房子、旧改、嵌入式套系和 AI 智慧厨房放到同一张桌上；端侧 AI 芯片开始追求本地大模型推理；机器人则从展台演示转向餐饮、养老与家庭陪伴。
+      <div class="source-strip sans">检索方向：厨房智能硬件、厨房空间设计、厨房品类创新、厨房工业设计、端侧 AI 硬件、具身智能到家。排序参考：相关性、时效性、可落地性、前瞻性、配图真实性。</div>
+    </section>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">1</div>
+        <div>
+          <div class="kicker sans">厨房空间设计 · 智慧厨房系统</div>
+          <h2>“AI在当下・好厨电好房子”今日开场：厨电竞争转向空间、旧改与 AI 协同</h2>
+          <div class="meta sans">
+            <span>来源：中国家电网</span>
+            <span>时间：论坛于 2026-08-25 在天津召开</span>
+            <span>评分：90</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">这场论坛把“好房子”政策、老旧厨房改造、嵌入式套系、AI 智能交互和《中国好厨房6大趋势》放到同一场讨论里。</p>
+      <figure class="news-photo">
+        <img class="kitchen-focus" src="images/kitchen_space_scene.png" alt="厨房空间与厨电嵌入式场景图">
+        <figcaption class="caption sans">厨房样板间实景，用于呈现厨电从单品参数竞争转向空间方案交付。图片来源：新华报业网 / 潮新闻历史图库。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>中国家电网预告，2026 厨电行业与市场发展研讨论坛于 8 月 25 日在天津召开，主题为“AI在当下 好厨电 好房子”。论坛将覆盖政策解读、行业趋势、AI 产业机会、新厨居生活与人群画像。</p>
+        <p>对厨电行业来说，这不是一次普通论坛。文章把一级能效、嵌入式、套系厨电、老旧住房改造和 AI 主动协同放在一起，说明竞争正在从单品功能走向“住宅品质提升 + 厨房空间交付 + AI智慧大脑”。</p>
+        <div class="brief-box sans"><b>小编有话说</b>今天最值得盯的是《中国好厨房6大趋势》。如果趋势报告足够具体，它可能会成为我们拆解厨房空间设计、品类创新和智能交互需求的一张地图。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">2</div>
+        <div>
+          <div class="kicker sans">端侧大模型 · AI硬件入口</div>
+          <h2>小米玄戒 O100 亮相：把大模型推理塞进端侧 AI 加速芯片</h2>
+          <div class="meta sans">
+            <span>来源：36氪 / 爱范儿</span>
+            <span>时间：36氪 2026-08-25 09:11 发布</span>
+            <span>评分：87</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">小米发布玄戒 AI 芯片“全家桶”，其中 O100 面向大模型推理，强调 3D 堆叠、高带宽与本地推理速度。</p>
+      <figure class="news-photo">
+        <img class="chip-focus" src="images/xiaomi_o100_arch.jpg" alt="小米玄戒 O100 AI 加速芯片发布现场图">
+        <figcaption class="caption sans">小米玄戒 O100 发布现场，展示 6nm 3D 晶圆级堆叠 AI 加速芯片。图片来源：36氪 / 爱范儿。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>36氪经爱范儿授权发布的报道提到，小米在玄戒技术沟通会上展示 O3、O100、D100 等芯片。其中 O100 是面向大模型推理的高带宽 AI 加速芯片，采用 Wafer on Wafer 晶圆级 3D 堆叠与 Hybrid Bonding 混合键合。</p>
+        <p>文章称，O100 通过 Face to Face 金属层直连，把内存带宽推到 1.22TB/s，并在小米实验室测试中配合 MiMo 跑出 330 Tokens/s 的本地推理成绩。它的意义不只是手机芯片，而是端侧 AI 硬件开始围绕模型推理重新设计。</p>
+        <div class="brief-box sans"><b>小编有话说</b>这条对厨房智能也有启发：如果未来厨房要做多模态感知、语音连续对话和本地隐私决策，端侧推理芯片的带宽与功耗，会直接决定体验上限。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">3</div>
+        <div>
+          <div class="kicker sans">具身智能 · 生活服务机器人</div>
+          <h2>新华网观察：机器人开始“懂生活”，从煎饼、外骨骼到家庭陪伴</h2>
+          <div class="meta sans">
+            <span>来源：新华网 / 天津日报转载</span>
+            <span>时间：新华网 2026-08-24 17:05，天津日报 2026-08-25 刊发</span>
+            <span>评分：84</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">WRC 现场的机器人消费街，把机器人从展台概念拉回生活：做咖啡、摊煎饼、健康诊疗、外骨骼助行和家庭服务都开始进入可体验阶段。</p>
+      <figure class="news-photo">
+        <img class="robot-focus" src="images/wrc_life_robot.webp" alt="2026世界机器人大会现场生活服务机器人图">
+        <figcaption class="caption sans">2026 世界机器人大会现场，生活服务机器人围绕洗衣、配送等任务进行演示。图片来源：雷科技 WRC 现场参考图。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>新华网科技观察文章提到，2026 世界机器人大会首次打造机器人消费街，多款机器人现场制作咖啡、煎饼、棉花糖，展现“科技 + 美食 + 文创”的沉浸式消费场景。</p>
+        <p>文章还关注养老、医疗和家庭服务：外骨骼设备可针对爬楼、爬坡自动适配算法，智能牙科服务舱把基础诊断带到社区，人形机器人则展示加热面包、叠衣服等生活化操作。</p>
+        <div class="brief-box sans"><b>小编有话说</b>具身智能真正落地，靠的不是把机器人做得多像人，而是找到高频、刚需、能付费的生活动作。厨房和养老都会是最硬的验证场。</div>
+      </div>
+    </article>
+
+    <footer class="footer sans">
+      参考来源：
+      <a href="https://news.cheaa.com/2026/0821/657639.shtml">中国家电网</a> ·
+      <a href="https://www.36kr.com/p/3953367316200576">36氪 / 爱范儿</a> ·
+      <a href="https://www.news.cn/20260824/e2de467e3b7044e0a58593cec5531545/c.html">新华网科技观察</a> ·
+      <a href="https://epaper.tianjinwe.com/tjrb/html/2026-08/25/content_143084_3770242.htm">天津日报数字报</a>
+      <br>
+      AI编辑部提示：本版为 H5 审核稿，审核通过后再生成长图、压缩、上传知识库并推送钉钉。
+    </footer>
+  </main>
+</body>
+</html>
