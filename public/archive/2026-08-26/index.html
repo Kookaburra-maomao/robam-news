@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI未来厨房新闻报 - 2026-08-26</title>
+  <style>
+    :root {
+      --paper: #f4ecd9;
+      --paper-dark: #ddcfad;
+      --ink: #17120f;
+      --muted: #675d50;
+      --rule: #211c17;
+      --red: #9a201d;
+      --wash: rgba(255,255,255,0.36);
+    }
+
+    * { box-sizing: border-box; }
+    html { scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255,255,255,0.52), transparent 24rem),
+        linear-gradient(135deg, #cbb88e 0%, #f8f1e0 45%, #cdbb92 100%);
+      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar { display: none; }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .page {
+      width: min(1060px, calc(100vw - 28px));
+      margin: 24px auto;
+      padding: 34px 44px 40px;
+      background:
+        linear-gradient(rgba(255,255,255,0.17), rgba(0,0,0,0.018)),
+        repeating-linear-gradient(90deg, rgba(48,38,24,0.028) 0 1px, transparent 1px 6px),
+        var(--paper);
+      border: 1px solid rgba(36,28,18,0.48);
+      box-shadow: 0 26px 68px rgba(39,30,18,0.24);
+    }
+
+    .sans {
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .masthead {
+      padding: 20px 0 18px;
+      text-align: center;
+      border-bottom: 3px solid var(--rule);
+    }
+
+    .masthead h1 {
+      margin: 0;
+      font-size: clamp(42px, 7.6vw, 82px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .issue-line {
+      padding: 12px 0 15px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .editor-note {
+      margin: 18px 0 26px;
+      padding: 16px 18px;
+      border-left: 7px solid var(--red);
+      background: var(--wash);
+      color: #2b231c;
+      font-size: 20px;
+      line-height: 1.62;
+      font-weight: 700;
+    }
+
+    .source-strip {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(33,28,23,0.45);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.58;
+      font-weight: 400;
+    }
+
+    .story {
+      padding: 30px 0 32px;
+      border-top: 3px solid var(--rule);
+    }
+
+    .story:first-of-type { padding-top: 24px; }
+
+    .story-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .rank {
+      width: 62px;
+      height: 62px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--rule);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .kicker {
+      margin: 2px 0 8px;
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(32px, 4.3vw, 50px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 930px;
+      margin: 16px 0 18px;
+      font-size: 22px;
+      line-height: 1.48;
+      font-weight: 900;
+      color: #302820;
+    }
+
+    .news-photo {
+      margin: 0 0 16px;
+      border: 2px solid var(--rule);
+      background: var(--paper-dark);
+    }
+
+    .news-photo img {
+      display: block;
+      width: 100%;
+      height: clamp(300px, 42vw, 455px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .news-photo .forum-focus { object-position: center 52%; }
+    .news-photo .expo-focus { object-position: center 48%; }
+    .news-photo .robot-focus { object-position: center 48%; }
+
+    .caption {
+      padding: 9px 11px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      background: rgba(244,236,217,0.88);
+    }
+
+    .story-content {
+      display: block;
+      max-width: 930px;
+      margin-top: 18px;
+    }
+
+    .story-content p {
+      margin: 0 0 13px;
+      font-size: 21px;
+      line-height: 1.66;
+      font-weight: 600;
+    }
+
+    .brief-box {
+      margin-top: 14px;
+      border-left: 7px solid var(--red);
+      padding: 13px 16px;
+      background: var(--wash);
+      font-size: 18px;
+      line-height: 1.62;
+      color: #312820;
+      font-weight: 600;
+    }
+
+    .brief-box b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--red);
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .meta span {
+      padding: 5px 8px;
+      border-left: 4px solid var(--red);
+      background: rgba(255,255,255,0.34);
+    }
+
+    .footer {
+      margin-top: 8px;
+      padding-top: 18px;
+      border-top: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100vw - 16px, 760px);
+        margin: 8px auto;
+        padding: 22px 18px 30px;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        font-size: 13px;
+      }
+
+      .masthead h1 {
+        font-size: clamp(38px, 13vw, 62px);
+      }
+
+      .editor-note {
+        font-size: 18px;
+      }
+
+      .story-head {
+        grid-template-columns: 54px 1fr;
+        gap: 12px;
+      }
+
+      .rank {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: clamp(28px, 8vw, 40px);
+      }
+
+      .dek {
+        font-size: 20px;
+      }
+
+      .news-photo img {
+        height: clamp(245px, 58vw, 360px);
+      }
+
+      .story-content p {
+        font-size: 19px;
+        line-height: 1.62;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="topbar sans">
+        <span>AI DAILY · 未来厨房 / 智能硬件 / 具身智能</span>
+        <span>2026年8月26日 · 星期三</span>
+      </div>
+      <div class="masthead">
+        <h1>AI未来厨房新闻报</h1>
+      </div>
+      <div class="issue-line sans">总第 044 期 · 覆盖 8 月 26 日公开资讯与近24小时高价值线索</div>
+    </header>
+
+    <section class="editor-note">
+      今天的主线是“从产品上新到产业闭环”：厨电侧开始把 DeepSeek 语音智能体、嵌入式标准和好房子交付绑定；深圳 AGIC 把芯片算力、大模型算法、具身智能和行业应用放进一条展会链路；机器人产业则从炫技转向真实作业、商业模式和国际供需。
+      <div class="source-strip sans">检索方向：厨房智能硬件、厨房空间设计、厨房工业设计、端侧 AI 硬件、具身智能、机器人产业化。排序参考：相关性、时效性、可落地性、前瞻性、配图真实性。</div>
+    </section>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">1</div>
+        <div>
+          <div class="kicker sans">厨房智能硬件 · 好房子交付</div>
+          <h2>博西家电三款厨电入选优质供给：DeepSeek 语音蒸烤、全嵌烟机和混烹套系同台</h2>
+          <div class="meta sans">
+            <span>来源：中国家电网</span>
+            <span>时间：2026-08-26 11:18</span>
+            <span>评分：92</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">在“AI在当下 好厨电 好房子”论坛后，博西家电将蒸烤、微蒸烤和双吸油烟机放进好房子语境，强调智能交互、嵌入式安全和空间适配。</p>
+      <figure class="news-photo">
+        <img class="forum-focus" src="images/cheaa_bsh_forum.jpeg" alt="2026厨电行业与市场发展研讨论坛现场图">
+        <figcaption class="caption sans">2026 厨电行业与市场发展研讨论坛现场。图片来源：中国家电网。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>中国家电网今天发布消息称，博西家电旗下西门子智魔方 Z5 智语蒸烤一体机、西门子 X9 双吸油烟机、博世御器 6 系微蒸烤一体机入选“中国家电网产品库优质供给产品”。</p>
+        <p>其中，西门子 Z5 接入晶御语音智能体并融合 DeepSeek 大语言模型，覆盖食谱灵感、备菜指导、烹制调控和清洁维护；博世御器 6 系主打 i-DM 智能混烹；西门子 X9 则用超薄全嵌结构适配橱柜平嵌、全嵌等安装模式。</p>
+        <div class="brief-box sans"><b>小编有话说</b>这条的价值不在“又多了几款新品”，而是博西把 AI 交互、嵌入式工艺和好房子改造放到一套逻辑里。未来厨电要进整案交付，产品边界会被橱柜、安装、语音和维护一起重新定义。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">2</div>
+        <div>
+          <div class="kicker sans">AI硬件 · 具身智能生态</div>
+          <h2>AGIC 深圳今日开幕：从芯片算力到具身智能，试图跑通 AI 产业闭环</h2>
+          <div class="meta sans">
+            <span>来源：AGIC 大会官网</span>
+            <span>时间：2026-08-26 至 08-28</span>
+            <span>评分：88</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">深圳国际通用人工智能产业博览会暨全球具身智能机器人产业博览会今日开幕，主题为“人机协同・无界未来”。</p>
+      <figure class="news-photo">
+        <img class="expo-focus" src="images/agic_hall.png" alt="AGIC展会现场展馆实景图">
+        <figcaption class="caption sans">AGIC 展会现场资料图，用于呈现 AI 硬件与具身智能展会场景。图片来源：深圳市人工智能产业协会 / AGIC 公开资料。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>AGIC 官网显示，2026 年 8 月 26 日至 28 日，大会在深圳国际会展中心召开，聚焦 AI 核心能力、具身智能、仿生智能和 AI+场景应用，汇聚 1100+ 品牌企业。</p>
+        <p>官方介绍中最值得关注的是“端到端产业闭环”：从芯片算力、大模型算法，到具身智能、行业应用、数据底座，展会希望让前沿算法走出实验室，进入生产线和真实行业场景。</p>
+        <div class="brief-box sans"><b>小编有话说</b>对未来厨房来说，这种展会值得盯“端侧算力、传感器、执行器和场景应用”的组合。厨房 AI 不会只靠一个模型完成，最后一定是硬件、模型、数据和交付能力一起拼。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">3</div>
+        <div>
+          <div class="kicker sans">具身智能 · 产业化落地</div>
+          <h2>人民日报海外版复盘 WRC：机器人从“会表演”转向“能干活”</h2>
+          <div class="meta sans">
+            <span>来源：人民网－人民日报海外版</span>
+            <span>时间：2026-08-26 09:18</span>
+            <span>评分：85</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">2026 世界机器人大会共发布 44 项新技术新方案，人民日报海外版重点讨论人形机器人、工业机器人、物流、医疗、农业等场景的规模化落地。</p>
+      <figure class="news-photo">
+        <img class="robot-focus" src="images/people_wrc_guest.jpg" alt="2026世界机器人大会现场外宾了解机器人产品">
+        <figcaption class="caption sans">外国嘉宾在 2026 世界机器人大会上了解机器人产品。图片来源：人民网－人民日报海外版。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>人民网转载《人民日报海外版》文章称，2026 世界机器人大会吸引 373 家企业集中展示 3000 余件产品，首发新品 311 件，现场参会人次达 55.7 万。</p>
+        <p>文章指出，本届大会的关注点正在从炫技表演，转向物流、制造、服务、农业、医疗健康等真实场景中的持续运行、学习和任务执行能力。国际嘉宾也强调，机器人落地依赖系统集成、专业人才、长期服务和本地化适配。</p>
+        <div class="brief-box sans"><b>小编有话说</b>这条是对具身智能的一次冷静校准：能跑、能跳、会端盘子只是入口，真正的商业价值在于“稳定重复地完成任务”。厨房机器人也绕不开这个门槛。</div>
+      </div>
+    </article>
+
+    <footer class="footer sans">
+      参考来源：
+      <a href="https://news.cheaa.com/2026/0826/657835.shtml">中国家电网</a> ·
+      <a href="https://www.agicexpo.com/AGICMeeting">AGIC 大会官网</a> ·
+      <a href="https://world.people.com.cn/n1/2026/0826/c1002-40786429.html">人民网－人民日报海外版</a>
+      <br>
+      AI编辑部提示：本版为 H5 审核稿，审核通过后再生成长图、压缩、上传知识库并推送钉钉。
+    </footer>
+  </main>
+</body>
+</html>
