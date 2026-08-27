@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI未来厨房新闻报 - 2026-08-27</title>
+  <style>
+    :root {
+      --paper: #f4ecd9;
+      --paper-dark: #ddcfad;
+      --ink: #17120f;
+      --muted: #675d50;
+      --rule: #211c17;
+      --red: #9a201d;
+      --wash: rgba(255,255,255,0.36);
+    }
+
+    * { box-sizing: border-box; }
+    html { scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255,255,255,0.52), transparent 24rem),
+        linear-gradient(135deg, #cbb88e 0%, #f8f1e0 45%, #cdbb92 100%);
+      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar { display: none; }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .page {
+      width: min(1060px, calc(100vw - 28px));
+      margin: 24px auto;
+      padding: 34px 44px 40px;
+      background:
+        linear-gradient(rgba(255,255,255,0.17), rgba(0,0,0,0.018)),
+        repeating-linear-gradient(90deg, rgba(48,38,24,0.028) 0 1px, transparent 1px 6px),
+        var(--paper);
+      border: 1px solid rgba(36,28,18,0.48);
+      box-shadow: 0 26px 68px rgba(39,30,18,0.24);
+    }
+
+    .sans {
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .masthead {
+      padding: 20px 0 18px;
+      text-align: center;
+      border-bottom: 3px solid var(--rule);
+    }
+
+    .masthead h1 {
+      margin: 0;
+      font-size: clamp(42px, 7.6vw, 82px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .issue-line {
+      padding: 12px 0 15px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .editor-note {
+      margin: 18px 0 26px;
+      padding: 16px 18px;
+      border-left: 7px solid var(--red);
+      background: var(--wash);
+      color: #2b231c;
+      font-size: 20px;
+      line-height: 1.62;
+      font-weight: 700;
+    }
+
+    .source-strip {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(33,28,23,0.45);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.58;
+      font-weight: 400;
+    }
+
+    .story {
+      padding: 30px 0 32px;
+      border-top: 3px solid var(--rule);
+    }
+
+    .story:first-of-type { padding-top: 24px; }
+
+    .story-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .rank {
+      width: 62px;
+      height: 62px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--rule);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .kicker {
+      margin: 2px 0 8px;
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(32px, 4.3vw, 50px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 930px;
+      margin: 16px 0 18px;
+      font-size: 22px;
+      line-height: 1.48;
+      font-weight: 900;
+      color: #302820;
+    }
+
+    .news-photo {
+      margin: 0 0 16px;
+      border: 2px solid var(--rule);
+      background: var(--paper-dark);
+    }
+
+    .news-photo img {
+      display: block;
+      width: 100%;
+      height: clamp(300px, 42vw, 455px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .news-photo .space-focus { object-position: center 52%; }
+    .news-photo .hardware-focus { object-position: center 48%; }
+    .news-photo .robot-focus { object-position: center 44%; }
+
+    .caption {
+      padding: 9px 11px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      background: rgba(244,236,217,0.88);
+    }
+
+    .story-content {
+      display: block;
+      max-width: 930px;
+      margin-top: 18px;
+    }
+
+    .story-content p {
+      margin: 0 0 13px;
+      font-size: 21px;
+      line-height: 1.66;
+      font-weight: 600;
+    }
+
+    .brief-box {
+      margin-top: 14px;
+      border-left: 7px solid var(--red);
+      padding: 13px 16px;
+      background: var(--wash);
+      font-size: 18px;
+      line-height: 1.62;
+      color: #312820;
+      font-weight: 600;
+    }
+
+    .brief-box b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--red);
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .meta span {
+      padding: 5px 8px;
+      border-left: 4px solid var(--red);
+      background: rgba(255,255,255,0.34);
+    }
+
+    .footer {
+      margin-top: 8px;
+      padding-top: 18px;
+      border-top: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100vw - 16px, 760px);
+        margin: 8px auto;
+        padding: 22px 18px 30px;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        font-size: 13px;
+      }
+
+      .masthead h1 {
+        font-size: clamp(38px, 13vw, 62px);
+      }
+
+      .editor-note {
+        font-size: 18px;
+      }
+
+      .story-head {
+        grid-template-columns: 54px 1fr;
+        gap: 12px;
+      }
+
+      .rank {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: clamp(28px, 8vw, 40px);
+      }
+
+      .dek {
+        font-size: 20px;
+      }
+
+      .news-photo img {
+        height: clamp(245px, 58vw, 360px);
+      }
+
+      .story-content p {
+        font-size: 19px;
+        line-height: 1.62;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="topbar sans">
+        <span>AI DAILY · 未来厨房 / 智能硬件 / 具身智能</span>
+        <span>2026年8月27日 · 星期四</span>
+      </div>
+      <div class="masthead">
+        <h1>AI未来厨房新闻报</h1>
+      </div>
+      <div class="issue-line sans">总第 045 期 · 覆盖 8 月 27 日公开资讯与近48小时高价值线索</div>
+    </header>
+
+    <section class="editor-note">
+      今天的主线是“厨房从设备间变成家庭核心场”：好厨房趋势报告把空间、套系化、AI主动管理放到同一张图里；智能烟机开始用视觉/温度感知提前判断油烟；具身智能则用真实比赛数据补上模型训练的底层燃料。
+      <div class="source-strip sans">检索方向：厨房空间设计、厨房品类创新、厨房工业设计、厨房智能硬件、具身智能、大模型算法。排序参考：相关性、时效性、可落地性、前瞻性、配图真实性。</div>
+    </section>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">1</div>
+        <div>
+          <div class="kicker sans">厨房空间设计 · 品类创新</div>
+          <h2>《中国好厨房好厨电六大趋势》发布：厨房从烹饪后台走向家庭第二客厅</h2>
+          <div class="meta sans">
+            <span>来源：中国家电网</span>
+            <span>时间：2026-08-27 09:00</span>
+            <span>评分：95</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">报告把可成长空间、AI厨房、套系化共创、绿色厨房、第二客厅和厨房美学并列为六大趋势，厨房正在成为“好房子”落地的关键样本。</p>
+      <figure class="news-photo">
+        <img class="space-focus" src="images/cheaa_kitchen_space.png" alt="华润时代雲境餐厨空间实景图">
+        <figcaption class="caption sans">华润时代雲境餐厨空间实景图。图片来源：中国家电网 / 好住房云研究院。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>中国家电网联合好住房云研究院发布《2026中国好厨房好厨电六大趋势》，判断“好房子”进入实践期后，厨房会成为居住体验升级最清晰的窗口。</p>
+        <p>报告强调，开放式厨房占比持续提升，LDK 一体化、中西厨融合、模块化收纳、灵活岛台和套系化厨电协同，正在把厨房从单一烹饪空间变成多人协作、社交陪伴和家庭审美的一部分。</p>
+        <div class="brief-box sans"><b>小编有话说</b>这条很适合作为研发和产品团队的“趋势底图”。未来厨房不是简单多放几台智能设备，而是要同时回答空间比例、安装预埋、设备协同、交互入口和审美融入这几道题。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">2</div>
+        <div>
+          <div class="kicker sans">厨房智能硬件 · 油烟感知</div>
+          <h2>澳柯玛发布 AI 智眼油烟机 G608 Pro：让烟机在油烟起来前先动起来</h2>
+          <div class="meta sans">
+            <span>来源：风口财经 / 大众新闻</span>
+            <span>时间：2026-08-25 19:23</span>
+            <span>评分：89</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">G608 Pro 搭载 AI 智眼技术和智能算法模型，通过锅内温度变化提前判断烹饪进程，自动开机并匹配风力档位。</p>
+      <figure class="news-photo">
+        <img class="hardware-focus" src="images/aucma_g608_2.png" alt="澳柯玛AI智眼系列油烟机G608 Pro发布会产品展示">
+        <figcaption class="caption sans">澳柯玛 AI 智眼系列油烟机 G608 Pro 发布会产品展示。图片来源：风口财经 / 澳柯玛公开图。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>澳柯玛在济南举行 2027 年度新品发布会，推出 AI 智眼系列油烟机 G608 Pro。新品强调“烟未起，风先行”，希望解决中式厨房里油烟扩散后才补救的体验痛点。</p>
+        <p>文章提到，该产品可根据锅内不同温度区间动态调节风量，并能识别异常升温趋势进行蜂鸣提醒；同时不绑定特定灶具，新旧厨房只更换烟机也能升级体验。</p>
+        <div class="brief-box sans"><b>小编有话说</b>这条比泛泛讲 AI 更落地：它把“感知”直接绑定到油烟、安全和兼容性。对厨电来说，用户不一定关心模型有多大，但会关心设备能不能提前发现问题、少打扰地自动处理。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">3</div>
+        <div>
+          <div class="kicker sans">具身智能 · 真实数据</div>
+          <h2>全球首个世界级人形机器人运动会全量数据集发布：赛场数据开始反哺产业训练</h2>
+          <div class="meta sans">
+            <span>来源：新华社 / 人民网</span>
+            <span>时间：2026-08-27 08:26</span>
+            <span>评分：88</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">第二届世界人形机器人运动会闭幕式发布全量数据集，覆盖超过 2500 小时真实场景操作数据。</p>
+      <figure class="news-photo">
+        <img class="robot-focus" src="images/humanoid_games_2026.png" alt="2026世界人形机器人运动会现场图">
+        <figcaption class="caption sans">2026 世界人形机器人运动会现场。图片来源：央视新闻公开图。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>新华社报道，第二届世界人形机器人运动会留下的全量数据集已发布，包含多视角视频、关节运动信息、本体状态反馈、任务执行结果等多模态时序数据。</p>
+        <p>更关键的是，数据集中还系统采集了失败案例、边界工况、意图与动作语义标签、目标识别标注和长程任务轨迹，能够直接服务具身智能模型训练与场景验证。</p>
+        <div class="brief-box sans"><b>小编有话说</b>家庭机器人要进入厨房，光靠舞台演示远远不够。真实任务里的失败、扰动和边界数据，才是把机器人从“会表演”推向“能干活”的硬通货。</div>
+      </div>
+    </article>
+
+    <footer class="footer sans">
+      参考来源：
+      <a href="https://news.cheaa.com/2026/0827/657864.shtml">中国家电网</a> ·
+      <a href="https://www.fengkouapp.com/news.html?id=1289709737646231552&type=news">风口财经</a> ·
+      <a href="https://world.people.com.cn/n1/2026/0827/c1002-40786999.html">人民网 / 新华社</a>
+      <br>
+      AI编辑部提示：本版为 H5 审核稿，审核通过后再生成长图、压缩、上传知识库并推送钉钉。
+    </footer>
+  </main>
+</body>
+</html>

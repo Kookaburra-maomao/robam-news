@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import { archiveStartDate, categories, reports } from "./reports-data";
 
-const featuredTags = ["厨房智能硬件", "具身智能", "厨房空间设计"];
+const featuredTags = ["AI技术趋势", "用户趋势", "设计趋势", "国家政策", "竞品动态"];
 
 function formatDate(date: string) {
   const [year, month, day] = date.split("-");
@@ -51,8 +51,8 @@ export default function Home() {
             <h1>AI未来厨房新闻报</h1>
           </div>
           <p>
-            持续沉淀厨房智能硬件、具身智能、
-            大模型算法、厨房空间设计、品类创新与工业设计的每日情报。
+            持续沉淀厨房智能硬件、具身智能、大模型算法、设计趋势、
+            用户趋势、国家政策与竞品动态的每日情报。
           </p>
         </section>
         <nav className="category-rail" aria-label="新闻分类">
@@ -106,8 +106,8 @@ export default function Home() {
               ))}
             </div>
             <p>
-              宽版报纸会扩展到 6-10 条高质量资讯，新增厨房空间设计、工业设计与品类创新，
-              用更大的版面承载竞品趋势和前瞻设计情报。
+              明日起抓取范围会扩展到 AI 技术趋势、用户趋势、设计趋势、国家政策和竞品动态，
+              用更完整的视角沉淀未来厨房情报。
             </p>
           </aside>
         </section>

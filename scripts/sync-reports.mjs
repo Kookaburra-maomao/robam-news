@@ -15,7 +15,14 @@ const categoryMap = [
   ["厨房空间设计", ["空间", "开放式", "套系", "全屋", "收纳", "动线", "厨房生活", "嵌入式", "定制", "整案交付"]],
   ["厨房品类创新", ["新品", "新厨电", "品类", "跨品类", "套装", "解决方案", "单品", "创新", "白皮书", "感知价值"]],
   ["厨房工业设计", ["工业设计", "CMF", "材质", "工艺", "形态", "交互", "面板", "设计", "无拉手", "全嵌", "双TFT"]],
+  ["AI技术趋势", ["AI技术", "技术趋势", "多模态", "VLA", "VLM", "端侧AI", "端侧 AI", "推理芯片", "AI OS", "智能硬件入口", "AI硬件"]],
+  ["用户趋势", ["用户趋势", "用户需求", "消费趋势", "消费偏好", "家庭结构", "适老", "育儿", "健康饮食", "厨房社交", "存量住宅", "以旧换新"]],
+  ["设计趋势", ["设计趋势", "空间美学", "生活方式", "隐藏式", "嵌入式", "一体化", "高颜值", "海外设计", "交互设计"]],
+  ["国家政策", ["国家政策", "政策", "标准", "规范", "住建", "补贴", "国补", "以旧换新", "绿色低碳", "监管", "行动方案"]],
+  ["竞品动态", ["竞品", "方太", "美的", "海尔", "卡萨帝", "博西", "西门子", "松下", "A.O.史密斯", "华帝", "凯度", "澳柯玛", "老板电器"]],
 ];
+
+const categories = ["全部", ...categoryMap.map(([category]) => category)];
 
 function stripTags(value) {
   return value
@@ -104,16 +111,16 @@ function copyReferencedAssets(html, sourceDir, destDir) {
 }
 
 function heroForImageRef(ref, date, copiedAssets, previewName) {
-  if (!ref) return previewName ? `archive/${date}/${previewName}` : "";
+  if (!ref) return previewName ? `/archive/${date}/${previewName}` : "";
   const decoded = decodeHtml(ref);
   if (/^(?:[a-z]+:)?\/\//i.test(decoded)) return decoded;
   if (decoded.startsWith("/") || decoded.startsWith("#") || decoded.startsWith("data:")) {
-    return previewName ? `archive/${date}/${previewName}` : "";
+    return previewName ? `/archive/${date}/${previewName}` : "";
   }
 
   const cleanRef = decoded.split("#")[0].split("?")[0];
-  if (copiedAssets.includes(cleanRef)) return `archive/${date}/${cleanRef}`;
-  return previewName ? `archive/${date}/${previewName}` : "";
+  if (copiedAssets.includes(cleanRef)) return `/archive/${date}/${cleanRef}`;
+  return previewName ? `/archive/${date}/${previewName}` : "";
 }
 
 function bestHtml(dir, date) {
@@ -165,7 +172,7 @@ for (const entry of readdirSync(sourceRoot, { withFileTypes: true })) {
     title: "AI未来厨房新闻报",
     summary,
     hero,
-    reportUrl: `archive/${date}/`,
+    reportUrl: `/archive/${date}/`,
     tags,
     articles: articleTags,
   });
@@ -173,7 +180,7 @@ for (const entry of readdirSync(sourceRoot, { withFileTypes: true })) {
 
 reports.sort((a, b) => b.date.localeCompare(a.date));
 
-const content = `export type NewsArticle = { title: string; tags: string[] };\n\nexport type NewsReport = {\n  date: string;\n  weekday: string;\n  issue: string;\n  title: string;\n  summary: string;\n  hero: string;\n  reportUrl: string;\n  tags: string[];\n  articles: NewsArticle[];\n};\n\nexport const categories = [\"全部\", \"具身智能\", \"厨房智能硬件\", \"大模型算法\", \"厨房空间设计\", \"厨房品类创新\", \"厨房工业设计\"] as const;\n\nexport const archiveStartDate = ${JSON.stringify(archiveStartDate)};\n\nexport const reports: NewsReport[] = ${JSON.stringify(reports, null, 2)};\n`;
+const content = `export type NewsArticle = { title: string; tags: string[] };\n\nexport type NewsReport = {\n  date: string;\n  weekday: string;\n  issue: string;\n  title: string;\n  summary: string;\n  hero: string;\n  reportUrl: string;\n  tags: string[];\n  articles: NewsArticle[];\n};\n\nexport const categories = ${JSON.stringify(categories)} as const;\n\nexport const archiveStartDate = ${JSON.stringify(archiveStartDate)};\n\nexport const reports: NewsReport[] = ${JSON.stringify(reports, null, 2)};\n`;
 
 writeFileSync(dataOutput, content);
 console.log(`Synced ${reports.length} reports to ${publicRoot}`);

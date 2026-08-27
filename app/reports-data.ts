@@ -12,11 +12,48 @@ export type NewsReport = {
   articles: NewsArticle[];
 };
 
-export const categories = ["全部", "具身智能", "厨房智能硬件", "大模型算法", "厨房空间设计", "厨房品类创新", "厨房工业设计"] as const;
+export const categories = ["全部","具身智能","厨房智能硬件","大模型算法","厨房空间设计","厨房品类创新","厨房工业设计","AI技术趋势","用户趋势","设计趋势","国家政策","竞品动态"] as const;
 
 export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
+  {
+    "date": "2026-08-27",
+    "weekday": "星期四",
+    "issue": "第 045 期",
+    "title": "AI未来厨房新闻报",
+    "summary": "今天的主线是“厨房从设备间变成家庭核心场”：好厨房趋势报告把空间、套系化、AI主动管理放到同一张图里；智能烟机开始用视觉/温度感知提前判断油烟；具身智能则用真实比赛数据补上模型训练的底层燃料。",
+    "hero": "/archive/2026-08-27/images/cheaa_kitchen_space.png",
+    "reportUrl": "/archive/2026-08-27/",
+    "tags": [
+      "具身智能",
+      "厨房智能硬件",
+      "大模型算法",
+      "厨房空间设计",
+      "竞品动态"
+    ],
+    "articles": [
+      {
+        "title": "《中国好厨房好厨电六大趋势》发布：厨房从烹饪后台走向家庭第二客厅",
+        "tags": [
+          "厨房智能硬件"
+        ]
+      },
+      {
+        "title": "澳柯玛发布 AI 智眼油烟机 G608 Pro：让烟机在油烟起来前先动起来",
+        "tags": [
+          "厨房智能硬件",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "全球首个世界级人形机器人运动会全量数据集发布：赛场数据开始反哺产业训练",
+        "tags": [
+          "具身智能"
+        ]
+      }
+    ]
+  },
   {
     "date": "2026-08-26",
     "weekday": "星期三",
@@ -30,7 +67,10 @@ export const reports: NewsReport[] = [
       "厨房智能硬件",
       "大模型算法",
       "厨房空间设计",
-      "厨房工业设计"
+      "厨房工业设计",
+      "设计趋势",
+      "国家政策",
+      "竞品动态"
     ],
     "articles": [
       {
@@ -38,7 +78,8 @@ export const reports: NewsReport[] = [
         "tags": [
           "厨房智能硬件",
           "厨房空间设计",
-          "厨房工业设计"
+          "厨房工业设计",
+          "竞品动态"
         ]
       },
       {
@@ -62,13 +103,15 @@ export const reports: NewsReport[] = [
     "issue": "第 043 期",
     "title": "AI未来厨房新闻报",
     "summary": "今天的主线是“AI能力正在进入可交付场景”：厨电行业把好房子、旧改、嵌入式套系和 AI 智慧厨房放到同一张桌上；端侧 AI 芯片开始追求本地大模型推理；机器人则从展台演示转向餐饮、养老与家庭陪伴。",
-    "hero": "archive/2026-08-25/images/kitchen_space_scene.png",
-    "reportUrl": "archive/2026-08-25/",
+    "hero": "/archive/2026-08-25/images/kitchen_space_scene.png",
+    "reportUrl": "/archive/2026-08-25/",
     "tags": [
       "具身智能",
       "厨房智能硬件",
       "大模型算法",
-      "厨房空间设计"
+      "厨房空间设计",
+      "AI技术趋势",
+      "设计趋势"
     ],
     "articles": [
       {
@@ -81,7 +124,8 @@ export const reports: NewsReport[] = [
       {
         "title": "小米玄戒 O100 亮相：把大模型推理塞进端侧 AI 加速芯片",
         "tags": [
-          "大模型算法"
+          "大模型算法",
+          "AI技术趋势"
         ]
       },
       {
@@ -98,28 +142,32 @@ export const reports: NewsReport[] = [
     "issue": "第 042 期",
     "title": "AI未来厨房新闻报",
     "summary": "今天的主线是“AI 从联网功能走进厨房硬件系统”：厨电品牌开始把智能体、视觉感知、分屏交互和空间设计打包成可交付方案；家庭机器人也在 WRC 现场把“做早餐、洗衣服”这类家务拆成可验证动作。",
-    "hero": "archive/2026-08-24/images/casdon_xiaozi.png",
-    "reportUrl": "archive/2026-08-24/",
+    "hero": "/archive/2026-08-24/images/casdon_xiaozi.png",
+    "reportUrl": "/archive/2026-08-24/",
     "tags": [
       "具身智能",
       "厨房智能硬件",
       "大模型算法",
       "厨房空间设计",
       "厨房品类创新",
-      "厨房工业设计"
+      "厨房工业设计",
+      "国家政策",
+      "竞品动态"
     ],
     "articles": [
       {
         "title": "凯度让“小紫”住进厨电：AI智能体开始接管蒸烤、净饮、洗碗与烟灶",
         "tags": [
           "厨房智能硬件",
-          "大模型算法"
+          "大模型算法",
+          "竞品动态"
         ]
       },
       {
         "title": "中国家电网：国补退场后，厨电竞争转向“好房子 + AI智慧大脑”",
         "tags": [
-          "厨房智能硬件"
+          "厨房智能硬件",
+          "国家政策"
         ]
       },
       {
