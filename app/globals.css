@@ -16,11 +16,13 @@
 
 html {
   background: #d5c29b;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  overflow-x: hidden;
   color: var(--ink);
   background:
     linear-gradient(90deg, rgba(58, 43, 22, 0.08), transparent 18%, transparent 82%, rgba(58, 43, 22, 0.08)),
@@ -32,6 +34,10 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+img {
+  max-width: 100%;
 }
 
 button {
@@ -123,6 +129,13 @@ h3 {
   gap: 8px;
   padding: 14px 0 18px;
   overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x proximity;
+}
+
+.category-rail::-webkit-scrollbar {
+  display: none;
 }
 
 .category-rail button {
@@ -136,6 +149,7 @@ h3 {
   color: var(--ink);
   background: rgba(255, 255, 255, 0.28);
   cursor: pointer;
+  scroll-snap-align: start;
 }
 
 .category-rail button.active {
@@ -184,7 +198,7 @@ h3 {
 
 .lead-story {
   display: grid;
-  grid-template-columns: minmax(420px, 0.95fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 0.95fr) minmax(0, 1fr);
   gap: 28px;
   align-items: stretch;
 }
@@ -209,6 +223,7 @@ h3 {
   font-size: clamp(36px, 4.2vw, 64px);
   line-height: 1.08;
   font-weight: 900;
+  overflow-wrap: anywhere;
 }
 
 .summary {
@@ -312,6 +327,7 @@ h3 {
   margin: 0;
   font-size: 25px;
   line-height: 1.18;
+  overflow-wrap: anywhere;
 }
 
 .issue-card p,
@@ -396,6 +412,7 @@ h3 {
   .site-shell {
     width: min(100vw - 16px, 760px);
     padding: 24px 18px 34px;
+    margin: 8px auto 24px;
   }
 
   .utility-line,
@@ -406,8 +423,15 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .utility-line {
+    gap: 8px;
+    font-size: 12px;
+    line-height: 1.45;
+    text-align: center;
+  }
+
   .utility-line span:last-child {
-    text-align: left;
+    text-align: center;
   }
 
   .masthead-panel {
@@ -415,11 +439,46 @@ h3 {
   }
 
   .masthead-panel h1 {
-    font-size: clamp(34px, 10.8vw, 58px);
+    font-size: clamp(34px, 10.2vw, 58px);
+    white-space: nowrap;
+  }
+
+  .masthead-panel p:last-child {
+    font-size: 17px;
+    line-height: 1.72;
+  }
+
+  .category-rail {
+    margin: 0 -18px;
+    padding: 12px 18px 16px;
+  }
+
+  .category-rail button {
+    padding: 9px 12px;
+    font-size: 13px;
   }
 
   .front-page {
     gap: 22px;
+    padding: 22px 0 26px;
+  }
+
+  .lead-story img,
+  .issue-card img {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .lead-copy h2 {
+    font-size: clamp(30px, 8.3vw, 44px);
+    line-height: 1.14;
+  }
+
+  .summary {
+    margin: 14px 0;
+    font-size: 17px;
+    line-height: 1.72;
   }
 
   .editorial-column {
@@ -429,6 +488,8 @@ h3 {
 
   .archive-item {
     grid-template-columns: 58px minmax(0, 1fr);
+    gap: 14px;
+    align-items: start;
   }
 
   .date-block {
@@ -443,5 +504,166 @@ h3 {
   .small-read {
     grid-column: 2;
     width: max-content;
+  }
+}
+
+@media (max-width: 640px) {
+  body {
+    background:
+      radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.42), transparent 18rem),
+      linear-gradient(135deg, #d0bd95 0%, #f7edd7 58%, #d2bd93 100%);
+  }
+
+  .site-shell {
+    width: 100%;
+    margin: 0;
+    padding: 18px 14px 30px;
+    border-width: 0 0 1px;
+    box-shadow: none;
+  }
+
+  .paper-header {
+    border-bottom-width: 4px;
+  }
+
+  .utility-line {
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+
+  .utility-line span:nth-child(2) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .utility-line span:last-child {
+    text-align: right;
+  }
+
+  .masthead-panel {
+    padding: 22px 0 20px;
+  }
+
+  .eyebrow,
+  .section-name {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+  }
+
+  .masthead-panel h1 {
+    font-size: clamp(32px, 9.6vw, 42px);
+  }
+
+  .masthead-panel p:last-child {
+    font-size: 15px;
+    line-height: 1.68;
+  }
+
+  .lead-copy h2 {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .summary {
+    font-size: 16px;
+  }
+
+  .tag-row span,
+  .mini-tags span {
+    padding: 4px 7px;
+    font-size: 11px;
+  }
+
+  .editorial-column {
+    padding: 16px 0 0;
+    background: transparent;
+  }
+
+  .editorial-column h3 {
+    font-size: 25px;
+  }
+
+  .daily-grid {
+    gap: 22px;
+    padding: 24px 0;
+  }
+
+  .issue-card {
+    gap: 12px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid rgba(32, 25, 21, 0.24);
+  }
+
+  .issue-card:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+  }
+
+  .issue-card h3,
+  .archive-item h3 {
+    font-size: 22px;
+    line-height: 1.24;
+  }
+
+  .issue-card p,
+  .archive-item p {
+    font-size: 14px;
+    line-height: 1.66;
+  }
+
+  .section-heading {
+    gap: 8px;
+  }
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+  .archive-item {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 18px 0 20px;
+  }
+
+  .date-block {
+    display: inline-flex;
+    justify-content: flex-start;
+    gap: 8px;
+    width: max-content;
+    height: auto;
+    padding: 6px 10px;
+    border-width: 1px;
+    border-radius: 0;
+  }
+
+  .date-block strong {
+    font-size: 20px;
+  }
+
+  .date-block span {
+    font-size: 12px;
+  }
+
+  .small-read {
+    grid-column: auto;
+    margin-top: 2px;
+  }
+}
+
+@media (max-width: 380px) {
+  .site-shell {
+    padding-inline: 12px;
+  }
+
+  .masthead-panel h1 {
+    font-size: 31px;
+  }
+
+  .utility-line {
+    font-size: 11px;
+  }
+
+  .category-rail {
+    margin-inline: -12px;
+    padding-inline: 12px;
   }
 }
