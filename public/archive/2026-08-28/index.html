@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI未来厨房新闻报 - 2026-08-28</title>
+  <style>
+    :root {
+      --paper: #f4ecd9;
+      --paper-dark: #ddcfad;
+      --ink: #17120f;
+      --muted: #675d50;
+      --rule: #211c17;
+      --red: #9a201d;
+      --wash: rgba(255,255,255,0.36);
+    }
+
+    * { box-sizing: border-box; }
+    html { scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255,255,255,0.52), transparent 24rem),
+        linear-gradient(135deg, #cbb88e 0%, #f8f1e0 45%, #cdbb92 100%);
+      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar { display: none; }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .page {
+      width: min(1060px, calc(100vw - 28px));
+      margin: 24px auto;
+      padding: 34px 44px 40px;
+      background:
+        linear-gradient(rgba(255,255,255,0.17), rgba(0,0,0,0.018)),
+        repeating-linear-gradient(90deg, rgba(48,38,24,0.028) 0 1px, transparent 1px 6px),
+        var(--paper);
+      border: 1px solid rgba(36,28,18,0.48);
+      box-shadow: 0 26px 68px rgba(39,30,18,0.24);
+    }
+
+    .sans {
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .masthead {
+      padding: 20px 0 18px;
+      text-align: center;
+      border-bottom: 3px solid var(--rule);
+    }
+
+    .masthead h1 {
+      margin: 0;
+      font-size: clamp(42px, 7.6vw, 82px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .issue-line {
+      padding: 12px 0 15px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .editor-note {
+      margin: 18px 0 26px;
+      padding: 16px 18px;
+      border-left: 7px solid var(--red);
+      background: var(--wash);
+      color: #2b231c;
+      font-size: 20px;
+      line-height: 1.62;
+      font-weight: 700;
+    }
+
+    .source-strip {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(33,28,23,0.45);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.58;
+      font-weight: 400;
+    }
+
+    .story {
+      padding: 30px 0 32px;
+      border-top: 3px solid var(--rule);
+    }
+
+    .story:first-of-type { padding-top: 24px; }
+
+    .story-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .rank {
+      width: 62px;
+      height: 62px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--rule);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .kicker {
+      margin: 2px 0 8px;
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(32px, 4.3vw, 50px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 930px;
+      margin: 16px 0 18px;
+      font-size: 22px;
+      line-height: 1.48;
+      font-weight: 900;
+      color: #302820;
+    }
+
+    .news-photo {
+      margin: 0 0 16px;
+      border: 2px solid var(--rule);
+      background: var(--paper-dark);
+    }
+
+    .news-photo img {
+      display: block;
+      width: 100%;
+      height: clamp(300px, 42vw, 455px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .news-photo .robot-focus { object-position: center 50%; }
+    .news-photo .policy-focus { object-position: center 48%; }
+    .news-photo .hardware-focus { object-position: center 50%; }
+
+    .caption {
+      padding: 9px 11px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      background: rgba(244,236,217,0.88);
+    }
+
+    .story-content {
+      display: block;
+      max-width: 930px;
+      margin-top: 18px;
+    }
+
+    .story-content p {
+      margin: 0 0 13px;
+      font-size: 21px;
+      line-height: 1.66;
+      font-weight: 600;
+    }
+
+    .brief-box {
+      margin-top: 14px;
+      border-left: 7px solid var(--red);
+      padding: 13px 16px;
+      background: var(--wash);
+      font-size: 18px;
+      line-height: 1.62;
+      color: #312820;
+      font-weight: 600;
+    }
+
+    .brief-box b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--red);
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .meta span {
+      padding: 5px 8px;
+      border-left: 4px solid var(--red);
+      background: rgba(255,255,255,0.34);
+    }
+
+    .footer {
+      margin-top: 8px;
+      padding-top: 18px;
+      border-top: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100vw - 16px, 760px);
+        margin: 8px auto;
+        padding: 22px 18px 30px;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        font-size: 13px;
+      }
+
+      .masthead h1 {
+        font-size: clamp(38px, 13vw, 62px);
+      }
+
+      .editor-note {
+        font-size: 18px;
+      }
+
+      .story-head {
+        grid-template-columns: 54px 1fr;
+        gap: 12px;
+      }
+
+      .rank {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: clamp(28px, 8vw, 40px);
+      }
+
+      .dek {
+        font-size: 20px;
+      }
+
+      .news-photo img {
+        height: clamp(245px, 58vw, 360px);
+      }
+
+      .story-content p {
+        font-size: 19px;
+        line-height: 1.62;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="topbar sans">
+        <span>AI DAILY · 未来厨房 / 智能硬件 / 具身智能</span>
+        <span>2026年8月28日 · 星期五</span>
+      </div>
+      <div class="masthead">
+        <h1>AI未来厨房新闻报</h1>
+      </div>
+      <div class="issue-line sans">总第 046 期 · 覆盖 8 月 28 日公开资讯与本周高价值线索</div>
+    </header>
+
+    <section class="editor-note">
+      今天的主线是“AI 硬件开始进入真实生活和产业政策坐标”：家电企业集体加码家庭机器人，政策侧明确把智能机器人、具身智能和人工智能+场景列入未来五年重点，AI Agent 也正在从软件走向眼镜、戒指、录音器等硬件入口。
+      <div class="source-strip sans">检索方向：竞品动态、国家政策、AI技术趋势、用户趋势、厨房智能硬件、具身智能。排序参考：相关性、时效性、可落地性、前瞻性、配图真实性。</div>
+    </section>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">1</div>
+        <div>
+          <div class="kicker sans">竞品动态 · 家庭具身智能</div>
+          <h2>海尔、美的、格力集体加码具身智能：家电企业开始抢家庭机器人入口</h2>
+          <div class="meta sans">
+            <span>来源：新浪科技 / 快科技</span>
+            <span>时间：2026-08-28</span>
+            <span>评分：94</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">家电巨头的机器人路线正在分化：海尔主打家庭服务，美的走工业与家庭双线，格力强调自研制造能力。</p>
+      <figure class="news-photo">
+        <img class="robot-focus" src="images/haier_home_robot_awe.jpg" alt="海尔家庭服务机器人展台现场图">
+        <figcaption class="caption sans">海尔家庭服务机器人展台现场图，用于呈现家电企业进入家庭具身智能场景。图片来源：东方财富 / AWE 公开图。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>新浪科技转载快科技消息称，今年海尔、美的、格力都把布局重点延伸到具身智能。海尔发布“海娃”家务、清洁、陪伴三类家庭服务机器人；美的既有面向工业的“美罗 U”，也在测试家庭“美拉”系列；格力则强调整机和零部件自研自产。</p>
+        <p>报道还提到，海信、TCL、科沃斯、方太等家电企业也在今年展示具身智能产品，形态覆盖家务、清洁、陪伴、烹饪等方向。家电企业的优势在渠道、场景和供应链，但真正进入家庭还要跨过成本、稳定性和用户信任门槛。</p>
+        <div class="brief-box sans"><b>小编有话说</b>这条不是单纯“机器人热”，而是竞品边界在变。未来厨房的对手可能不只是一台烟机或蒸烤箱，而是能接管家务、清洁和陪伴任务的家庭智能体。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">2</div>
+        <div>
+          <div class="kicker sans">国家政策 · AI技术趋势</div>
+          <h2>央视新闻聚焦“未来五年”：智能机器人、具身智能与人工智能+场景被点名</h2>
+          <div class="meta sans">
+            <span>来源：央视新闻</span>
+            <span>时间：2026-08-28 05:47</span>
+            <span>评分：90</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">工信部相关负责人介绍“十五五”新型工业化方向，智能机器人、具身智能、人工智能+、机器人+等被放进产业化落地框架。</p>
+      <figure class="news-photo">
+        <img class="policy-focus" src="images/miit_policy_conference.jpg" alt="国务院新闻办公室发布会现场图">
+        <figcaption class="caption sans">国新办就“十五五”规划实施和新型工业化举行发布会。图片来源：中国新闻网公开图。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>央视新闻今天刊文梳理未来五年新兴产业、新场景和新材料发展方向。文章提到，将加快打造集成电路、航空航天、生物医药、低空经济、新型储能、智能机器人等新兴支柱产业。</p>
+        <p>在应用场景上，政策信号更直接：人工智能+、机器人+、工业互联网+等重大场景会继续被培育，创新成果要在真实场景中测试、验证、迭代，并推动轻量化、低成本、易部署的行业解决方案。</p>
+        <div class="brief-box sans"><b>小编有话说</b>这对未来厨房很关键。政策不是只在远处喊口号，而是在提醒企业：AI 要进入研发设计、生产制造、质检运维和消费场景，最终比拼的是能不能形成可复制、可部署的行业方案。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">3</div>
+        <div>
+          <div class="kicker sans">AI技术趋势 · 用户趋势</div>
+          <h2>36氪观察 Agent 硬件出海：AI 从屏幕里走出来，先寄居在眼镜、戒指和录音器上</h2>
+          <div class="meta sans">
+            <span>来源：36氪 / 亿邦动力</span>
+            <span>时间：2026-08-28 09:27</span>
+            <span>评分：88</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">AI Agent 正从软件产品外溢到可穿戴和办公硬件，硬件创业进入“AI 原生”与全球化验证阶段。</p>
+      <figure class="news-photo">
+        <img class="hardware-focus" src="images/agent_wearable_product.jpg" alt="AI可穿戴硬件产品图">
+        <figcaption class="caption sans">AI 眼镜、智能戒指与随身录音硬件示意产品图。图片来源：36氪公开图。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>36氪经授权发布亿邦动力文章指出，Agent 落地正在从软件进入硬件。眼镜、耳机、戒指、录音器等熟悉形态开始承载健康、工作和陪伴类 Agent 功能，部分中国品牌已经在海外验证市场。</p>
+        <p>文章也给出一个冷静判断：硬件不是“把 AI 塞进去”就会被用户接受。AI Pin、Rabbit R1 的失败提醒行业，产品要尊重已有习惯，聚焦高频真实需求，并在订阅服务、售后、合规和用户信任上持续兑现。</p>
+        <div class="brief-box sans"><b>小编有话说</b>厨房里的 AI 也要学会做减法。最好的入口未必是大屏，而可能是一个自然存在的设备形态：烟机、灶具、冰箱、眼镜或耳机，关键是能不能真正减少用户负担。</div>
+      </div>
+    </article>
+
+    <footer class="footer sans">
+      参考来源：
+      <a href="https://finance.sina.com.cn/tech/roll/2026-08-28/doc-inipvmnc5673190.shtml">新浪科技 / 快科技</a> ·
+      <a href="https://news.cctv.com/2026/08/28/ARTISOiDJ1yvhdkxE32oMDWF260828.shtml">央视新闻</a> ·
+      <a href="https://www.36kr.com/p/3954723404135808">36氪 / 亿邦动力</a>
+      <br>
+      AI编辑部提示：本版为 H5 审核稿，审核通过后再生成长图、压缩、上传知识库并推送钉钉。
+    </footer>
+  </main>
+</body>
+</html>
