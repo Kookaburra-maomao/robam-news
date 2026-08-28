@@ -2,8 +2,12 @@ import { mkdirSync, copyFileSync, existsSync, readdirSync, readFileSync, rmSync,
 import { execFileSync } from "node:child_process";
 import path from "node:path";
 
-const workspaceRoot = path.resolve(process.cwd(), "..");
-const sourceRoot = path.join(workspaceRoot, "output", "ai_daily");
+const workspaceRoot = process.env.ROBAM_WORKSPACE_ROOT
+  ? path.resolve(process.env.ROBAM_WORKSPACE_ROOT)
+  : path.resolve(process.cwd(), "../..");
+const sourceRoot = process.env.ROBAM_NEWS_SOURCE_ROOT
+  ? path.resolve(process.env.ROBAM_NEWS_SOURCE_ROOT)
+  : path.join(workspaceRoot, "output", "ai_daily");
 const publicRoot = path.join(process.cwd(), "public", "archive");
 const dataOutput = path.join(process.cwd(), "app", "reports-data.ts");
 const archiveStartDate = "2026-08-24";
@@ -111,16 +115,16 @@ function copyReferencedAssets(html, sourceDir, destDir) {
 }
 
 function heroForImageRef(ref, date, copiedAssets, previewName) {
-  if (!ref) return previewName ? `/archive/${date}/${previewName}` : "";
+  if (!ref) return previewName ? `archive/${date}/${previewName}` : "";
   const decoded = decodeHtml(ref);
   if (/^(?:[a-z]+:)?\/\//i.test(decoded)) return decoded;
   if (decoded.startsWith("/") || decoded.startsWith("#") || decoded.startsWith("data:")) {
-    return previewName ? `/archive/${date}/${previewName}` : "";
+    return previewName ? `archive/${date}/${previewName}` : "";
   }
 
   const cleanRef = decoded.split("#")[0].split("?")[0];
-  if (copiedAssets.includes(cleanRef)) return `/archive/${date}/${cleanRef}`;
-  return previewName ? `/archive/${date}/${previewName}` : "";
+  if (copiedAssets.includes(cleanRef)) return `archive/${date}/${cleanRef}`;
+  return previewName ? `archive/${date}/${previewName}` : "";
 }
 
 function bestHtml(dir, date) {
@@ -172,7 +176,7 @@ for (const entry of readdirSync(sourceRoot, { withFileTypes: true })) {
     title: "AI未来厨房新闻报",
     summary,
     hero,
-    reportUrl: `/archive/${date}/`,
+    reportUrl: `archive/${date}/`,
     tags,
     articles: articleTags,
   });
