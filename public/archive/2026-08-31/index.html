@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI未来厨房新闻报 - 2026-08-31</title>
+  <style>
+    :root {
+      --paper: #f4ecd9;
+      --paper-dark: #ddcfad;
+      --ink: #17120f;
+      --muted: #675d50;
+      --rule: #211c17;
+      --red: #9a201d;
+      --wash: rgba(255,255,255,0.36);
+    }
+
+    * { box-sizing: border-box; }
+    html { scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255,255,255,0.52), transparent 24rem),
+        linear-gradient(135deg, #cbb88e 0%, #f8f1e0 45%, #cdbb92 100%);
+      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar { display: none; }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .page {
+      width: min(1060px, calc(100vw - 28px));
+      margin: 24px auto;
+      padding: 34px 44px 40px;
+      background:
+        linear-gradient(rgba(255,255,255,0.17), rgba(0,0,0,0.018)),
+        repeating-linear-gradient(90deg, rgba(48,38,24,0.028) 0 1px, transparent 1px 6px),
+        var(--paper);
+      border: 1px solid rgba(36,28,18,0.48);
+      box-shadow: 0 26px 68px rgba(39,30,18,0.24);
+    }
+
+    .sans {
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .masthead {
+      padding: 20px 0 18px;
+      text-align: center;
+      border-bottom: 3px solid var(--rule);
+    }
+
+    .masthead h1 {
+      margin: 0;
+      font-size: clamp(42px, 7.6vw, 82px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .issue-line {
+      padding: 12px 0 15px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .editor-note {
+      margin: 18px 0 26px;
+      padding: 16px 18px;
+      border-left: 7px solid var(--red);
+      background: var(--wash);
+      color: #2b231c;
+      font-size: 20px;
+      line-height: 1.62;
+      font-weight: 700;
+    }
+
+    .source-strip {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(33,28,23,0.45);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.58;
+      font-weight: 400;
+    }
+
+    .story {
+      padding: 30px 0 32px;
+      border-top: 3px solid var(--rule);
+    }
+
+    .story:first-of-type { padding-top: 24px; }
+
+    .story-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .rank {
+      width: 62px;
+      height: 62px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--rule);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .kicker {
+      margin: 2px 0 8px;
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(32px, 4.3vw, 50px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 930px;
+      margin: 16px 0 18px;
+      font-size: 22px;
+      line-height: 1.48;
+      font-weight: 900;
+      color: #302820;
+    }
+
+    .news-photo {
+      margin: 0 0 16px;
+      border: 2px solid var(--rule);
+      background: var(--paper-dark);
+    }
+
+    .news-photo img {
+      display: block;
+      width: 100%;
+      height: clamp(300px, 42vw, 455px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .news-photo .kitchen-focus { object-position: center 52%; }
+    .news-photo .robot-focus { object-position: center 46%; }
+    .news-photo .hardware-focus { object-position: center 50%; }
+
+    .caption {
+      padding: 9px 11px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      background: rgba(244,236,217,0.88);
+    }
+
+    .story-content {
+      display: block;
+      max-width: 930px;
+      margin-top: 18px;
+    }
+
+    .story-content p {
+      margin: 0 0 13px;
+      font-size: 21px;
+      line-height: 1.66;
+      font-weight: 600;
+    }
+
+    .brief-box {
+      margin-top: 14px;
+      border-left: 7px solid var(--red);
+      padding: 13px 16px;
+      background: var(--wash);
+      font-size: 18px;
+      line-height: 1.62;
+      color: #312820;
+      font-weight: 600;
+    }
+
+    .brief-box b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--red);
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .meta span {
+      padding: 5px 8px;
+      border-left: 4px solid var(--red);
+      background: rgba(255,255,255,0.34);
+    }
+
+    .footer {
+      margin-top: 8px;
+      padding-top: 18px;
+      border-top: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100vw - 16px, 760px);
+        margin: 8px auto;
+        padding: 22px 18px 30px;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        font-size: 13px;
+      }
+
+      .masthead h1 {
+        font-size: clamp(38px, 13vw, 62px);
+      }
+
+      .editor-note {
+        font-size: 18px;
+      }
+
+      .story-head {
+        grid-template-columns: 54px 1fr;
+        gap: 12px;
+      }
+
+      .rank {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: clamp(28px, 8vw, 40px);
+      }
+
+      .dek {
+        font-size: 20px;
+      }
+
+      .news-photo img {
+        height: clamp(245px, 58vw, 360px);
+      }
+
+      .story-content p {
+        font-size: 19px;
+        line-height: 1.62;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="topbar sans">
+        <span>AI DAILY · 未来厨房 / 智能硬件 / 具身智能</span>
+        <span>2026年8月31日 · 星期一</span>
+      </div>
+      <div class="masthead">
+        <h1>AI未来厨房新闻报</h1>
+      </div>
+      <div class="issue-line sans">总第 047 期 · 覆盖 8 月 31 日公开资讯与周末高价值线索</div>
+    </header>
+
+    <section class="editor-note">
+      今天的主线是“AI 从单点功能进入系统级硬件”：厨电侧用视觉、芯片和联动控制减少守候成本，机器人产业开始把场景、数据和基础设施摆到台前，Agent 算力则从云端下沉到桌面与端侧设备。
+      <div class="source-strip sans">检索方向：厨房智能硬件、竞品动态、具身智能、AI技术趋势、用户趋势、设计趋势、国家政策。排序参考：相关性、时效性、可落地性、前瞻性、配图真实性。</div>
+    </section>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">1</div>
+        <div>
+          <div class="kicker sans">厨房智能硬件 · 竞品动态</div>
+          <h2>海尔 Seeker 套系：AI之眼2.0把灶具、烟机、洗碗机拉成一套自主厨房</h2>
+          <div class="meta sans">
+            <span>来源：海尔官网</span>
+            <span>时间：2026-08-27</span>
+            <span>评分：88</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">海尔厨电称，上半年厨电产业营收同比增长 10.8%，并把增长解释为 AI 场景方案的结果。</p>
+      <figure class="news-photo">
+        <img class="kitchen-focus" src="images/haier_seeker_ai_kitchen.jpeg" alt="海尔 Seeker 套系厨房产品图">
+        <figcaption class="caption sans">海尔 Seeker 套系相关厨房产品图，用于呈现厨电设备协同和 AI 感知场景。图片来源：海尔官网公开图。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>海尔官网文章提到，Seeker 套系把燃气灶、烟机、洗碗机、蒸烤箱等设备纳入协同链路：灶具的 AI之眼2.0 可识别锅内状态，溢锅前主动调小火；烟机用 AI 增压芯片感知烟道压力；洗碗机根据油污程度匹配洗涤方案。</p>
+        <p>这条新闻不是 8 月 31 日当天发布，时效性做了扣分；但它对“未来厨房”非常直接：竞品正在把单品智能包装成成套解决方案，卖点从参数、颜值，进一步转向“设备帮用户少操心”。</p>
+        <div class="brief-box sans"><b>小编有话说</b>智能厨电下一阶段会少谈“我能联网”，多谈“我能不能替你看火、判断油烟、识别油污、协调设备”。这类能力一旦稳定，就会变成用户能感知的厨房减负。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">2</div>
+        <div>
+          <div class="kicker sans">具身智能 · 国家政策</div>
+          <h2>经济参考报：具身智能机器人迈向“价值兑现”，从展台表演转到真实工位</h2>
+          <div class="meta sans">
+            <span>来源：新华网 / 经济参考报</span>
+            <span>时间：2026-08-31 10:32</span>
+            <span>评分：93</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">世界机器人大会和世界人形机器人运动会之后，行业焦点从“会不会动”转向“能不能干活、能不能规模复用”。</p>
+      <figure class="news-photo">
+        <img class="robot-focus" src="images/humanoid_games_linkerbot.jpg" alt="世界人形机器人运动会现场机器人图">
+        <figcaption class="caption sans">世界人形机器人运动会现场机器人图，用于呈现机器人在真实场景任务中的动作能力。图片来源：凤凰网公开图。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>新华网转载《经济参考报》今天文章称，2026 世界机器人大会上，快递分拣、商超理货、工业码垛、家庭服务等真实任务成为重点，灵巧手、触觉感知、端到端导航和通信底座也被频繁提及。</p>
+        <p>报道还提到，“全球机器人应用探索计划”将面向全球征集应用场景需求，每年遴选 1000 个应用场景开展免费试用与二次开发。对产业而言，这意味着场景供给、数据积累和方案复用会越来越重要。</p>
+        <div class="brief-box sans"><b>小编有话说</b>厨房机器人最难的不是摆个样子，而是在油、水、火、刀具和狭小空间里稳定完成任务。具身智能如果要进厨房，必须先把“真实工位”这件事想透。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">3</div>
+        <div>
+          <div class="kicker sans">AI技术趋势 · 智能硬件</div>
+          <h2>36氪：OpenAI、Anthropic 抢购 Mac mini，本地 Agent 算力成为新硬件入口</h2>
+          <div class="meta sans">
+            <span>来源：36氪 / 机器之心</span>
+            <span>时间：2026-08-31 11:31</span>
+            <span>评分：89</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">Agent 不只需要大模型，也需要靠近真实软件、操作系统和用户数据的本地算力节点。</p>
+      <figure class="news-photo">
+        <img class="hardware-focus" src="images/mac_agent_local_compute.jpg" alt="36氪文章中的本地 AI Agent 算力图">
+        <figcaption class="caption sans">36氪原文配图，用于呈现 Mac、Agent 与本地算力的关系。图片来源：36氪公开图。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>36氪经授权发布机器之心文章称，OpenAI 过去几个月购买了数万台 Mac mini 和 Mac Studio，用于强化学习和计算机操作智能体开发；Anthropic 也在通过 AWS 租用大量 Mac 算力。</p>
+        <p>文章的核心判断是：这些设备并不是取代数据中心训练集群，而是承担并行交互、轨迹采集、任务验证、本地推理和部分后训练工作。AI Agent 越接近真实操作环境，对端侧和桌面算力的需求就越明显。</p>
+        <div class="brief-box sans"><b>小编有话说</b>未来厨房里的 Agent 也会遇到同样问题：云端会思考，但本地设备要快速感知、低延迟响应、保护隐私。端侧算力会从“配置项”变成产品体验的一部分。</div>
+      </div>
+    </article>
+
+    <footer class="footer sans">
+      参考来源：
+      <a href="https://www.haier.com/about_haier/xinwen/20260828_294375.shtml">海尔官网</a> ·
+      <a href="https://www.news.cn/fortune/20260831/035f4a2db10a4377955c952febb35cc8/c.html">新华网 / 经济参考报</a> ·
+      <a href="https://www.36kr.com/p/3962813343399299">36氪 / 机器之心</a>
+      <br>
+      AI编辑部提示：本版为 H5 审核稿，审核通过后再生成长图、压缩、上传知识库并推送钉钉。
+    </footer>
+  </main>
+</body>
+</html>

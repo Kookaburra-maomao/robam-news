@@ -18,6 +18,44 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-08-31",
+    "weekday": "星期一",
+    "issue": "第 047 期",
+    "title": "AI未来厨房新闻报",
+    "summary": "今天的主线是“AI 从单点功能进入系统级硬件”：厨电侧用视觉、芯片和联动控制减少守候成本，机器人产业开始把场景、数据和基础设施摆到台前，Agent 算力则从云端下沉到桌面与端侧设备。",
+    "hero": "archive/2026-08-31/images/haier_seeker_ai_kitchen.jpeg",
+    "reportUrl": "archive/2026-08-31/",
+    "tags": [
+      "具身智能",
+      "厨房智能硬件",
+      "大模型算法",
+      "厨房空间设计",
+      "竞品动态"
+    ],
+    "articles": [
+      {
+        "title": "海尔 Seeker 套系：AI之眼2.0把灶具、烟机、洗碗机拉成一套自主厨房",
+        "tags": [
+          "厨房智能硬件",
+          "厨房空间设计",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "经济参考报：具身智能机器人迈向“价值兑现”，从展台表演转到真实工位",
+        "tags": [
+          "具身智能"
+        ]
+      },
+      {
+        "title": "36氪：OpenAI、Anthropic 抢购 Mac mini，本地 Agent 算力成为新硬件入口",
+        "tags": [
+          "大模型算法"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-08-28",
     "weekday": "星期五",
     "issue": "第 046 期",
