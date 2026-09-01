@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI未来厨房新闻报 - 2026-09-01</title>
+  <style>
+    :root {
+      --paper: #f4ecd9;
+      --paper-dark: #ddcfad;
+      --ink: #17120f;
+      --muted: #675d50;
+      --rule: #211c17;
+      --red: #9a201d;
+      --wash: rgba(255,255,255,0.36);
+    }
+
+    * { box-sizing: border-box; }
+    html { scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255,255,255,0.52), transparent 24rem),
+        linear-gradient(135deg, #cbb88e 0%, #f8f1e0 45%, #cdbb92 100%);
+      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar { display: none; }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .page {
+      width: min(1060px, calc(100vw - 28px));
+      margin: 24px auto;
+      padding: 34px 44px 40px;
+      background:
+        linear-gradient(rgba(255,255,255,0.17), rgba(0,0,0,0.018)),
+        repeating-linear-gradient(90deg, rgba(48,38,24,0.028) 0 1px, transparent 1px 6px),
+        var(--paper);
+      border: 1px solid rgba(36,28,18,0.48);
+      box-shadow: 0 26px 68px rgba(39,30,18,0.24);
+    }
+
+    .sans {
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .masthead {
+      padding: 20px 0 18px;
+      text-align: center;
+      border-bottom: 3px solid var(--rule);
+    }
+
+    .masthead h1 {
+      margin: 0;
+      font-size: clamp(42px, 7.6vw, 82px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .issue-line {
+      padding: 12px 0 15px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .editor-note {
+      margin: 18px 0 26px;
+      padding: 16px 18px;
+      border-left: 7px solid var(--red);
+      background: var(--wash);
+      color: #2b231c;
+      font-size: 20px;
+      line-height: 1.62;
+      font-weight: 700;
+    }
+
+    .source-strip {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(33,28,23,0.45);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.58;
+      font-weight: 400;
+    }
+
+    .story {
+      padding: 30px 0 32px;
+      border-top: 3px solid var(--rule);
+    }
+
+    .story:first-of-type { padding-top: 24px; }
+
+    .story-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .rank {
+      width: 62px;
+      height: 62px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--rule);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .kicker {
+      margin: 2px 0 8px;
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(32px, 4.3vw, 50px);
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 930px;
+      margin: 16px 0 18px;
+      font-size: 22px;
+      line-height: 1.48;
+      font-weight: 900;
+      color: #302820;
+    }
+
+    .news-photo {
+      margin: 0 0 16px;
+      border: 2px solid var(--rule);
+      background: var(--paper-dark);
+    }
+
+    .news-photo img {
+      display: block;
+      width: 100%;
+      height: clamp(300px, 42vw, 455px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .news-photo .event-focus { object-position: center 50%; }
+    .news-photo .robot-focus { object-position: center 44%; }
+    .news-photo .hardware-focus { object-position: center 50%; }
+
+    .caption {
+      padding: 9px 11px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      background: rgba(244,236,217,0.88);
+    }
+
+    .story-content {
+      display: block;
+      max-width: 930px;
+      margin-top: 18px;
+    }
+
+    .story-content p {
+      margin: 0 0 13px;
+      font-size: 21px;
+      line-height: 1.66;
+      font-weight: 600;
+    }
+
+    .brief-box {
+      margin-top: 14px;
+      border-left: 7px solid var(--red);
+      padding: 13px 16px;
+      background: var(--wash);
+      font-size: 18px;
+      line-height: 1.62;
+      color: #312820;
+      font-weight: 600;
+    }
+
+    .brief-box b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--red);
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      font-size: 15px;
+      font-weight: 900;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .meta span {
+      padding: 5px 8px;
+      border-left: 4px solid var(--red);
+      background: rgba(255,255,255,0.34);
+    }
+
+    .footer {
+      margin-top: 8px;
+      padding-top: 18px;
+      border-top: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100vw - 16px, 760px);
+        margin: 8px auto;
+        padding: 22px 18px 30px;
+      }
+
+      .topbar {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+        font-size: 13px;
+      }
+
+      .masthead h1 {
+        font-size: clamp(38px, 13vw, 62px);
+      }
+
+      .editor-note {
+        font-size: 18px;
+      }
+
+      .story-head {
+        grid-template-columns: 54px 1fr;
+        gap: 12px;
+      }
+
+      .rank {
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+      }
+
+      h2 {
+        font-size: clamp(28px, 8vw, 40px);
+      }
+
+      .dek {
+        font-size: 20px;
+      }
+
+      .news-photo img {
+        height: clamp(245px, 58vw, 360px);
+      }
+
+      .story-content p {
+        font-size: 19px;
+        line-height: 1.62;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="topbar sans">
+        <span>AI DAILY · 未来厨房 / 智能硬件 / 具身智能</span>
+        <span>2026年9月1日 · 星期二</span>
+      </div>
+      <div class="masthead">
+        <h1>AI未来厨房新闻报</h1>
+      </div>
+      <div class="issue-line sans">总第 048 期 · 覆盖 9 月 1 日公开资讯与 24 小时内高价值线索</div>
+    </header>
+
+    <section class="editor-note">
+      今天的主线是“厨房智能开始回到真实场景”：烟机不只拼风量，也在拼空间美学、空气感知和清洁减负；机器人不只拼会走，更要拼能不能抓、拧、搬、持续工作。
+      <div class="source-strip sans">检索方向：厨房智能硬件、厨房空间设计、竞品动态、具身智能、AI技术趋势、用户趋势、国家政策。排序参考：相关性、时效性、可落地性、前瞻性、配图真实性。</div>
+    </section>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">1</div>
+        <div>
+          <div class="kicker sans">厨房智能硬件 · 厨房空间设计 · 竞品动态</div>
+          <h2>华帝隐系列烟机 Y9 入选优质供给：把“净烟科技”藏进厨房空间</h2>
+          <div class="meta sans">
+            <span>来源：搜狐 / 证券之星</span>
+            <span>时间：2026-08-31 18:16</span>
+            <span>评分：91</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">“好厨房好厨电”研讨论坛把 AI、地产、设计与厨电放到同一张桌上，华帝用半隐式烟机讲了一个从单品到空间体验的竞品故事。</p>
+      <figure class="news-photo">
+        <img class="event-focus" src="images/vatti_y9.jpeg" alt="2026 厨电行业与市场发展研讨论坛现场">
+        <figcaption class="caption sans">2026 厨电行业与市场发展研讨论坛现场，华帝隐系列烟机 Y9 入选优质供给产品。图片来源：搜狐公开图。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>报道提到，华帝隐系列烟机 Y9 采用半隐式设计，并以 32m³/min 爆炒风量、1600Pa 最大静压、蒸水洗自清洁和 VOC 监测等能力，把烟机从“排烟设备”包装成厨房空气管家。</p>
+        <p>更值得看的是话术变化：华帝强调 AI 的价值不是替代用户烹饪，而是降低中式烹饪门槛、保留烹饪乐趣。这正贴近未来厨房的产品判断：用户要的是少守候、少清洁、少打扰，而不是被复杂智能重新教育。</p>
+        <div class="brief-box sans"><b>小编有话说</b>这条对我们有直接参考价值。烟机的竞争正在从“更猛”走向“更懂空间、更懂空气、更少存在感”，真正的智能要能藏在体验里。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">2</div>
+        <div>
+          <div class="kicker sans">具身智能 · 智能硬件 · 家庭机器人</div>
+          <h2>36氪：机器人需要一双怎样的“手”？灵巧手成落地前的硬门槛</h2>
+          <div class="meta sans">
+            <span>来源：36氪 / IT时报</span>
+            <span>时间：2026-09-01 10:01</span>
+            <span>评分：90</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">夹豆、称量、搭积木、拧螺丝，这些“人类顺手”的动作，正在暴露机器人真正进入家庭和厨房前必须补齐的触觉、力控和可靠性。</p>
+      <figure class="news-photo">
+        <img class="robot-focus" src="images/robot_hand_tesla.jpg" alt="人形机器人手部结构示意图">
+        <figcaption class="caption sans">36氪原文配图，用于呈现人形机器人手部执行能力。图片来源：36氪公开图。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>文章从第二届世界人形机器人运动会的灵巧手项目切入，提到电动工具装配、粉末称量、积木搭建、镊子夹豆等项目已有全自主队伍夺冠，说明机器人末端执行能力在快速迭代。</p>
+        <p>但挑战也很清楚：一双高性能灵巧手需要集成微型电机、减速机构、编码器、力传感器和触觉传感器，量产阶段成本可占整机 15% 到 20%，同时还要面对长期高频抓取带来的损耗。</p>
+        <div class="brief-box sans"><b>小编有话说</b>厨房场景比工厂更乱：湿滑、油污、热源、易碎物、非标准餐具全在一起。灵巧手如果过不了可靠性和清洁维护关，家庭机器人就很难真正进厨房。</div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">3</div>
+        <div>
+          <div class="kicker sans">具身智能 · 大模型算法 · 产业落地</div>
+          <h2>36氪：优必选与宇树同场竞速，DeepSeek 战投让“大脑+本体”绑定更清晰</h2>
+          <div class="meta sans">
+            <span>来源：36氪 / 定焦One</span>
+            <span>时间：2026-09-01 09:59</span>
+            <span>评分：89</span>
+          </div>
+        </div>
+      </div>
+      <p class="dek">人形机器人上半年营收站到同一量级，优必选更强调工业交付，宇树则在盈利和资本市场上领先，行业开始从“谁更像人”转向“谁能持续交付”。</p>
+      <figure class="news-photo">
+        <img class="hardware-focus" src="images/ubtech_unitree_factory.jpg" alt="优必选商用服务机器人与人形机器人产品线">
+        <figcaption class="caption sans">优必选商用服务系统及人形机器人产品线图，用于呈现其工业、商用与家庭消费场景布局。图片来源：36氪公开图。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>36氪文章对比了优必选和宇树的中期成绩：优必选 2026 年上半年营收 12.69 亿元，宇树为 11.52 亿元；优必选全尺寸具身智能人形机器人收入 5.90 亿元，同比增长 1445.0%。</p>
+        <p>报道还提到，宇树 IPO 战略配售引入 DeepSeek，后者斥资约 1.41 亿元获配 93.34 万股，双方将在 AI 大模型与具身智能领域展开深度合作。这个信号很关键：机器人竞争正在从机械本体，扩展到模型、数据、场景和交付能力的系统战。</p>
+        <div class="brief-box sans"><b>小编有话说</b>未来厨房也会走向“大脑+硬件+场景数据”的组合。谁能先把真实家庭任务沉淀成数据闭环，谁就更可能把智能从演示带进日常。</div>
+      </div>
+    </article>
+
+    <footer class="footer sans">
+      参考来源：
+      <a href="https://m.sohu.com/a/1070081450_115377">搜狐 / 证券之星</a> ·
+      <a href="https://www.36kr.com/p/3963115883527305">36氪 / IT时报</a> ·
+      <a href="https://www.36kr.com/p/3960426602658951">36氪 / 定焦One</a>
+      <br>
+      AI编辑部提示：本版为 H5 审核稿，审核通过后再生成长图、压缩、上传知识库并推送钉钉。
+    </footer>
+  </main>
+</body>
+</html>
