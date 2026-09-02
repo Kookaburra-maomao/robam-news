@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI未来厨房新闻报 - 2026-09-02</title>
+  <style>
+    :root {
+      --paper: #f4ecd9;
+      --paper-dark: #ddcfad;
+      --ink: #17120f;
+      --muted: #675d50;
+      --rule: #211c17;
+      --red: #9a201d;
+      --wash: rgba(255,255,255,0.38);
+    }
+
+    * { box-sizing: border-box; }
+    html { scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255,255,255,0.52), transparent 24rem),
+        linear-gradient(135deg, #cbb88e 0%, #f8f1e0 45%, #cdbb92 100%);
+      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar { display: none; }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .page {
+      width: min(1060px, calc(100vw - 28px));
+      margin: 24px auto;
+      padding: 34px 44px 40px;
+      background:
+        linear-gradient(rgba(255,255,255,0.17), rgba(0,0,0,0.018)),
+        repeating-linear-gradient(90deg, rgba(48,38,24,0.028) 0 1px, transparent 1px 6px),
+        var(--paper);
+      border: 1px solid rgba(36,28,18,0.48);
+      box-shadow: 0 26px 68px rgba(39,30,18,0.24);
+    }
+
+    .sans {
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .masthead {
+      padding: 20px 0 18px;
+      text-align: center;
+      border-bottom: 3px solid var(--rule);
+    }
+
+    .masthead h1 {
+      margin: 0;
+      font-size: clamp(42px, 7.6vw, 82px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .issue-line {
+      padding: 12px 0 15px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .editor-note {
+      margin: 18px 0 26px;
+      padding: 16px 18px;
+      border-left: 7px solid var(--red);
+      background: var(--wash);
+      color: #2b231c;
+      font-size: 20px;
+      line-height: 1.62;
+      font-weight: 700;
+    }
+
+    .source-strip {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(33,28,23,0.45);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.58;
+      font-weight: 400;
+    }
+
+    .story {
+      padding: 30px 0 32px;
+      border-top: 3px solid var(--rule);
+    }
+
+    .story:first-of-type { padding-top: 24px; }
+
+    .story-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .rank {
+      width: 62px;
+      height: 62px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--rule);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .kicker {
+      margin: 2px 0 8px;
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(31px, 4.1vw, 48px);
+      line-height: 1.13;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 930px;
+      margin: 16px 0 18px;
+      font-size: 22px;
+      line-height: 1.48;
+      font-weight: 900;
+      color: #302820;
+    }
+
+    .news-photo {
+      margin: 0 0 16px;
+      border: 2px solid var(--rule);
+      background: var(--paper-dark);
+    }
+
+    .news-photo img {
+      display: block;
+      width: 100%;
+      height: clamp(300px, 42vw, 455px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .news-photo .food-focus { object-position: center 52%; }
+    .news-photo .robot-focus { object-position: center 48%; }
+    .news-photo .world-focus { object-position: center 50%; }
+
+    .caption {
+      padding: 9px 11px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      background: rgba(244,236,217,0.88);
+    }
+
+    .story-content {
+      display: block;
+      max-width: 930px;
+      margin-top: 18px;
+    }
+
+    .story-content p {
+      margin: 0 0 13px;
+      font-size: 21px;
+      line-height: 1.66;
+      font-weight: 600;
+    }
+
+    .brief-box {
+      margin-top: 14px;
+      border-left: 7px solid var(--red);
+      padding: 13px 16px;
+      background: var(--wash);
+      font-size: 18px;
+      line-height: 1.62;
+      color: #312820;
+      font-weight: 600;
+    }
+
+    .brief-box b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--red);
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      font-size: 15px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 16px 0 0;
+      font-family: Arial, "Noto Sans SC", sans-serif;
+    }
+
+    .meta-grid span {
+      min-height: 52px;
+      padding: 10px 12px;
+      border: 1px solid rgba(33,28,23,0.46);
+      background: rgba(255,255,255,0.22);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .footer {
+      padding-top: 20px;
+      border-top: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: calc(100vw - 16px);
+        margin: 8px auto;
+        padding: 20px 16px 28px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 13px;
+      }
+
+      .masthead h1 {
+        font-size: clamp(35px, 9.2vw, 54px);
+        white-space: normal;
+      }
+
+      .editor-note {
+        font-size: 18px;
+        line-height: 1.55;
+      }
+
+      .story-head {
+        grid-template-columns: 54px 1fr;
+        gap: 12px;
+      }
+
+      .rank {
+        width: 54px;
+        height: 54px;
+        font-size: 26px;
+      }
+
+      h2 { font-size: 30px; }
+      .dek { font-size: 20px; }
+
+      .news-photo img {
+        height: 260px;
+      }
+
+      .story-content p {
+        font-size: 19px;
+        line-height: 1.62;
+      }
+
+      .meta-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="topbar sans">
+        <span>AI DAILY · 数字厨电 / 智能硬件 / 具身智能</span>
+        <span>2026年9月2日 · 星期三</span>
+      </div>
+      <div class="masthead">
+        <h1>AI未来厨房新闻报</h1>
+      </div>
+      <div class="issue-line sans">总第 049 期 · 覆盖 9 月 2 日公开资讯与近 24 小时高价值线索</div>
+    </header>
+
+    <section class="editor-note">
+      今天的主线是“AI开始补齐从厨房硬件到物理世界的链路”：厨电先在食材识别、菜谱联动和保鲜策略上落地；机器人则在模块化与世界模型上寻找降本和训练效率的答案。
+      <div class="source-strip sans">检索方向：厨房智能硬件、竞品动态、具身智能、AI技术趋势、用户趋势、厨房空间设计、国家政策。排序参考：相关性、时效性、可落地性、前瞻性、配图真实性。</div>
+    </section>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">1</div>
+        <div>
+          <div class="kicker sans">厨房智能硬件 · 竞品动态 · 用户趋势</div>
+          <h2>海尔冰箱把“AI饮食管家”塞进真实厨房</h2>
+        </div>
+      </div>
+      <p class="dek">从看库存、识别食材到联动蒸烤箱预热，冰箱正在从单体硬件变成家庭饮食入口。</p>
+      <figure class="news-photo">
+        <img class="food-focus" src="images/haier_fridge_ai_2.jpg" alt="海尔冰箱 AI 食材识别场景">
+        <figcaption class="caption sans">图源：新华网报道配图，海尔 Seeker 多舱魔方冰箱展示食材识别与存储建议场景。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>新华网 8 月 29 日报道，海尔冰箱在 2026 年上半年线上、线下份额保持领先，增长背后不只是大白电规模，而是 AI 场景开始进入饮食链路。文章提到，海尔冰箱正围绕“购、存、管、取、烹”做全流程体验：买菜前查看余量，入库后由 AI 识别食材并给出存储建议，取出后推荐菜谱并联动蒸烤箱预热。</p>
+        <p>这条新闻不是今天发布，但它补到了厨电硬件最关键的落地方向：AI 不只做语音助手，而是进入食材识别、保鲜策略、菜单推荐和设备协同。对未来厨房而言，冰箱很可能先成为“食材数据中枢”，再向烟灶蒸烤、洗碗、水槽等设备扩展。</p>
+        <div class="brief-box"><b>小编有话说</b>这类 AI 厨电的价值点不在“会聊天”，而在能不能把食材、菜单、烹饪设备和家庭习惯串起来。真正值得关注的是传感器、视觉识别和跨设备联动能否长期稳定。</div>
+        <div class="meta-grid">
+          <span>来源：新华网 · 2026-08-29</span>
+          <span>新闻评分：86 / 100 · 时效扣分但场景强相关</span>
+          <span>图片评分：89 / 100 · 真实食材识别场景，主题直接</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">2</div>
+        <div>
+          <div class="kicker sans">具身智能 · 硬件架构 · 工业设计</div>
+          <h2>机器人的下一站，或许是“乐高化”</h2>
+        </div>
+      </div>
+      <p class="dek">模块化正在成为机器人从展会演示走向规模化落地的工程路线。</p>
+      <figure class="news-photo">
+        <img class="robot-focus" src="images/robot_lego_1.jpg" alt="本末科技 D1 模块化机器人现场演示">
+        <figcaption class="caption sans">图源：36氪 / AI前线，世界机器人大会现场的模块化轮足机器人演示。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>36氪经 AI前线授权发布的文章指出，机器人行业的叙事正被两个问题卡住：泛化能力不足、开发与制造成本过高。相比继续单点堆 AI，模块化路线试图用标准动力模组、整机模块和拼接系统，把同一套硬件重组为巡检、运输、应急等不同形态。</p>
+        <p>文中提到，本末科技 D1 围绕 P10 一体化直驱关节模组构建，两台 D1 可在 3 秒内拼接，并在双轮足与四轮足形态之间切换，拼接后承载能力可达 60 公斤。对于厨房或家务机器人，这个思路也有启发：单一万能机器人未必最快落地，标准底座加可替换执行模块可能更现实。</p>
+        <div class="brief-box"><b>小编有话说</b>厨房里的机器人尤其需要模块化思维。擦、拿、倒、夹、洗、搬这些动作差异很大，与其追一个全能形态，不如先把底盘、关节、末端执行器和感知模块做成可复用平台。</div>
+        <div class="meta-grid">
+          <span>来源：36氪 / AI前线 · 2026-09-01 16:16</span>
+          <span>新闻评分：91 / 100 · 具身智能落地路径清晰</span>
+          <span>图片评分：91 / 100 · 现场演示图，真实性与信息量高</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">3</div>
+        <div>
+          <div class="kicker sans">AI技术趋势 · 大模型算法 · 家庭具身智能</div>
+          <h2>李飞飞 World Labs 发布多模态世界模型 Atlas</h2>
+        </div>
+      </div>
+      <p class="dek">从几张照片重建 3D 空间，未来厨房的机器人训练或许能少搭很多“样板间”。</p>
+      <figure class="news-photo">
+        <img class="world-focus" src="images/world_model_3.jpg" alt="World Labs Atlas 机器人空间智能演示">
+        <figcaption class="caption sans">图源：36氪 / 爱范儿，World Labs Atlas 展示机器人视角与空间仿真能力。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>36氪 9 月 2 日发布的爱范儿文章报道，李飞飞创办的 World Labs 推出多模态世界模型 Atlas。它面向空间智能，可原生处理文本、图像、视频、相机位姿和 3D 深度信息，并在同一模型里做世界生成、空间重建与时空模拟。</p>
+        <p>文章特别提到 Atlas 对具身智能的意义：用手机拍摄真实工厂或房间，就有机会生成高精度 3D 物理空间，让机器人在虚拟空间里试错；它还能渲染机器人机载摄像头看到的 RGB 与深度图，并模拟柜门、箱子、海绵等不同物体的受力反馈。</p>
+        <div class="brief-box"><b>小编有话说</b>这条对厨房产品很有想象力。未来做开放式厨房、复杂台面和多设备协同时，数字孪生不只是展示图，而可能直接变成机器人训练、动线验证和交互测试的基础设施。</div>
+        <div class="meta-grid">
+          <span>来源：36氪 / 爱范儿 · 2026-09-02 09:59</span>
+          <span>新闻评分：90 / 100 · 技术前瞻强，厨房转译空间大</span>
+          <span>图片评分：86 / 100 · 技术演示清晰，略偏 Demo 截图</span>
+        </div>
+      </div>
+    </article>
+
+    <footer class="footer sans">
+      今日看点：冰箱开始管理食材与烹饪，机器人走向模块化，世界模型让厨房数字孪生更接近可训练空间。
+      <br>
+      资料来源：新华网、36氪 / AI前线、36氪 / 爱范儿。编辑判断基于公开信息整理，仅用于内部情报沉淀。
+    </footer>
+  </main>
+</body>
+</html>

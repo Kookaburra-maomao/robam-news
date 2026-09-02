@@ -18,6 +18,44 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-09-02",
+    "weekday": "星期三",
+    "issue": "第 049 期",
+    "title": "AI未来厨房新闻报",
+    "summary": "今天的主线是“AI开始补齐从厨房硬件到物理世界的链路”：厨电先在食材识别、菜谱联动和保鲜策略上落地；机器人则在模块化与世界模型上寻找降本和训练效率的答案。",
+    "hero": "archive/2026-09-02/images/haier_fridge_ai_2.jpg",
+    "reportUrl": "archive/2026-09-02/",
+    "tags": [
+      "具身智能",
+      "厨房智能硬件",
+      "大模型算法",
+      "AI技术趋势",
+      "竞品动态"
+    ],
+    "articles": [
+      {
+        "title": "海尔冰箱把“AI饮食管家”塞进真实厨房",
+        "tags": [
+          "厨房智能硬件",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "机器人的下一站，或许是“乐高化”",
+        "tags": [
+          "具身智能"
+        ]
+      },
+      {
+        "title": "李飞飞 World Labs 发布多模态世界模型 Atlas",
+        "tags": [
+          "大模型算法",
+          "AI技术趋势"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-09-01",
     "weekday": "星期二",
     "issue": "第 048 期",
