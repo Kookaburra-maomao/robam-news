@@ -18,6 +18,45 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-09-03",
+    "weekday": "星期四",
+    "issue": "第 050 期",
+    "title": "AI未来厨房新闻报",
+    "summary": "今天的主线是“家电智能从单品能力转向空间协同”：AI Agent 开始接管烹饪、环境与日程，家电设计继续向嵌入式和高能效演进，家庭机器人则更像一个会调度设备的移动入口。",
+    "hero": "archive/2026-09-03/images/lg_thinq_claw_kitchen.png",
+    "reportUrl": "archive/2026-09-03/",
+    "tags": [
+      "具身智能",
+      "厨房智能硬件",
+      "大模型算法",
+      "厨房空间设计",
+      "厨房品类创新",
+      "厨房工业设计",
+      "设计趋势"
+    ],
+    "articles": [
+      {
+        "title": "LG ThinQ Claw：厨房里的 AI Agent 开始读懂上下文",
+        "tags": [
+          "厨房智能硬件",
+          "大模型算法"
+        ]
+      },
+      {
+        "title": "Samsung IFA 展出新一代 Bespoke AI 家电：更薄、更嵌入、更省电",
+        "tags": [
+          "大模型算法"
+        ]
+      },
+      {
+        "title": "家用机器人未必先做人形，“机器人脑”可能更早落地",
+        "tags": [
+          "具身智能"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-09-02",
     "weekday": "星期三",
     "issue": "第 049 期",

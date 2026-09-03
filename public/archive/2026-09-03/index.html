@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI未来厨房新闻报 - 2026-09-03</title>
+  <style>
+    :root {
+      --paper: #f4ecd9;
+      --paper-dark: #ddcfad;
+      --ink: #17120f;
+      --muted: #675d50;
+      --rule: #211c17;
+      --red: #9a201d;
+      --wash: rgba(255,255,255,0.38);
+    }
+
+    * { box-sizing: border-box; }
+    html { scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255,255,255,0.52), transparent 24rem),
+        linear-gradient(135deg, #cbb88e 0%, #f8f1e0 45%, #cdbb92 100%);
+      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar { display: none; }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .page {
+      width: min(1060px, calc(100vw - 28px));
+      margin: 24px auto;
+      padding: 34px 44px 40px;
+      background:
+        linear-gradient(rgba(255,255,255,0.17), rgba(0,0,0,0.018)),
+        repeating-linear-gradient(90deg, rgba(48,38,24,0.028) 0 1px, transparent 1px 6px),
+        var(--paper);
+      border: 1px solid rgba(36,28,18,0.48);
+      box-shadow: 0 26px 68px rgba(39,30,18,0.24);
+    }
+
+    .sans {
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .masthead {
+      padding: 20px 0 18px;
+      text-align: center;
+      border-bottom: 3px solid var(--rule);
+    }
+
+    .masthead h1 {
+      margin: 0;
+      font-size: clamp(42px, 7.6vw, 82px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .issue-line {
+      padding: 12px 0 15px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .editor-note {
+      margin: 18px 0 26px;
+      padding: 16px 18px;
+      border-left: 7px solid var(--red);
+      background: var(--wash);
+      color: #2b231c;
+      font-size: 20px;
+      line-height: 1.62;
+      font-weight: 700;
+    }
+
+    .source-strip {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(33,28,23,0.45);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.58;
+      font-weight: 400;
+    }
+
+    .story {
+      padding: 30px 0 32px;
+      border-top: 3px solid var(--rule);
+    }
+
+    .story:first-of-type { padding-top: 24px; }
+
+    .story-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .rank {
+      width: 62px;
+      height: 62px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--rule);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .kicker {
+      margin: 2px 0 8px;
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(31px, 4.1vw, 48px);
+      line-height: 1.13;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 930px;
+      margin: 16px 0 18px;
+      font-size: 22px;
+      line-height: 1.48;
+      font-weight: 900;
+      color: #302820;
+    }
+
+    .news-photo {
+      margin: 0 0 16px;
+      border: 2px solid var(--rule);
+      background: var(--paper-dark);
+    }
+
+    .news-photo img {
+      display: block;
+      width: 100%;
+      height: clamp(300px, 42vw, 455px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .news-photo .lg-focus { object-position: center 50%; }
+    .news-photo .samsung-focus { object-position: center 50%; }
+    .news-photo .robot-focus { object-position: center 50%; }
+
+    .caption {
+      padding: 9px 11px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      background: rgba(244,236,217,0.88);
+    }
+
+    .story-content {
+      display: block;
+      max-width: 930px;
+      margin-top: 18px;
+    }
+
+    .story-content p {
+      margin: 0 0 13px;
+      font-size: 21px;
+      line-height: 1.66;
+      font-weight: 600;
+    }
+
+    .brief-box {
+      margin-top: 14px;
+      border-left: 7px solid var(--red);
+      padding: 13px 16px;
+      background: var(--wash);
+      font-size: 18px;
+      line-height: 1.62;
+      color: #312820;
+      font-weight: 600;
+    }
+
+    .brief-box b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--red);
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      font-size: 15px;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 16px 0 0;
+      font-family: Arial, "Noto Sans SC", sans-serif;
+    }
+
+    .meta-grid span {
+      min-height: 52px;
+      padding: 10px 12px;
+      border: 1px solid rgba(33,28,23,0.46);
+      background: rgba(255,255,255,0.22);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+      font-weight: 700;
+    }
+
+    .footer {
+      padding-top: 20px;
+      border-top: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    @media (max-width: 720px) {
+      .page {
+        width: calc(100vw - 16px);
+        margin: 8px auto;
+        padding: 20px 16px 28px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+        font-size: 13px;
+      }
+
+      .masthead h1 {
+        font-size: clamp(35px, 9.2vw, 54px);
+        white-space: normal;
+      }
+
+      .editor-note {
+        font-size: 18px;
+        line-height: 1.55;
+      }
+
+      .story-head {
+        grid-template-columns: 54px 1fr;
+        gap: 12px;
+      }
+
+      .rank {
+        width: 54px;
+        height: 54px;
+        font-size: 26px;
+      }
+
+      h2 { font-size: 30px; }
+      .dek { font-size: 20px; }
+
+      .news-photo img { height: 260px; }
+
+      .story-content p {
+        font-size: 19px;
+        line-height: 1.62;
+      }
+
+      .meta-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="topbar sans">
+        <span>AI DAILY · 数字厨电 / 空间设计 / 家庭机器人</span>
+        <span>2026年9月3日 · 星期四</span>
+      </div>
+      <div class="masthead">
+        <h1>AI未来厨房新闻报</h1>
+      </div>
+      <div class="issue-line sans">总第 050 期 · 覆盖 9 月 3 日公开资讯与近 24 小时高价值线索</div>
+    </header>
+
+    <section class="editor-note">
+      今天的主线是“家电智能从单品能力转向空间协同”：AI Agent 开始接管烹饪、环境与日程，家电设计继续向嵌入式和高能效演进，家庭机器人则更像一个会调度设备的移动入口。
+      <div class="source-strip sans">检索方向：厨房智能硬件、具身智能、大模型算法、厨房空间设计、厨房品类创新、厨房工业设计、AI技术趋势、用户趋势、设计趋势、国家政策、竞品动态。排序参考：相关性、时效性、可落地性、前瞻性、配图真实性。</div>
+    </section>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">1</div>
+        <div>
+          <div class="kicker sans">厨房智能硬件 · AI技术趋势 · 用户趋势</div>
+          <h2>LG ThinQ Claw：厨房里的 AI Agent 开始读懂上下文</h2>
+        </div>
+      </div>
+      <p class="dek">从食材、日程到设备联动，AI Home 不再只是远程开关，而是在推断“下一步该做什么”。</p>
+      <figure class="news-photo">
+        <img class="lg-focus" src="images/lg_thinq_claw_kitchen.png" alt="LG ThinQ Claw 在厨房场景中推荐菜谱并联动家电">
+        <figcaption class="caption sans">图源：LG Global Newsroom，ThinQ Claw 在厨房场景中根据食材与上下文推荐菜谱并连接冰箱、烤箱等设备。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>LG 8 月 31 日发布 IFA 2026 预告，展示下一代 AI Home，并重点介绍 ThinQ Claw。官方称它是面向 LG AI Home 的文本聊天式 AI Agent，能够理解用户意图和生活上下文，连接服务与设备，给出更贴近当下情境的建议。</p>
+        <p>在厨房场景里，LG 举例称 ThinQ Claw 可根据用户的待客计划管理烹饪设备，也能结合购物、食材与偏好推荐菜谱。它不是单个厨电的 AI 功能，而是把冰箱、烤箱、环境、日程和服务串成一个家庭操作系统。</p>
+        <div class="brief-box"><b>小编有话说</b>这条对厨电最有参考价值。未来厨房里的核心竞争，不只是某台设备更聪明，而是谁能把“我有什么食材、我要招待谁、设备现在能做什么”连成完整决策链。</div>
+        <div class="meta-grid">
+          <span>来源：LG Global Newsroom · 2026-08-31</span>
+          <span>新闻评分：92 / 100 · 厨房 AI Agent 场景明确</span>
+          <span>图片评分：80 / 100 · 主题强，但含 AI 生成元素</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">2</div>
+        <div>
+          <div class="kicker sans">厨房空间设计 · 厨房工业设计 · 竞品动态</div>
+          <h2>Samsung IFA 展出新一代 Bespoke AI 家电：更薄、更嵌入、更省电</h2>
+        </div>
+      </div>
+      <p class="dek">24 英寸平整化设计与 600mm 标准深度，说明 AI 家电也在回到真实住宅的空间约束里。</p>
+      <figure class="news-photo">
+        <img class="samsung-focus" src="images/samsung_ifa_appliance_design.jpg" alt="Samsung Connect IFA 2026 家电展区">
+        <figcaption class="caption sans">图源：Samsung Global Newsroom，Samsung Connect IFA 2026 展区展示 Bespoke AI 家电、厨电与空间化陈列。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>Samsung Global Newsroom 9 月 3 日发布消息，三星在 IFA 2026 期间展示新的 24 英寸前置式洗衣机产品线，并将平整化设计扩展到更多机型。该系列正在 Samsung Connect 展区展出，强调现代家居中的一体化外观。</p>
+        <p>结合三星 9 月 2 日关于 Bespoke AI 洗护新品的发布，新款 10kg 机型主打 A-70% 能效，13kg 大容量机型则控制在欧洲厨房和家政间常见的 600mm 标准深度内。对厨电和家电套系来说，这个方向说明“高性能 AI 家电”必须同时满足空间嵌入、节能和外观统一。</p>
+        <div class="brief-box"><b>小编有话说</b>工业设计不是外观装饰，而是产品进入真实厨房的入场券。嵌入深度、门板平齐、屏幕与面板语言统一，会直接影响套系化和开放式厨房的接受度。</div>
+        <div class="meta-grid">
+          <span>来源：Samsung Global Newsroom · 2026-09-03 / 09-02</span>
+          <span>新闻评分：88 / 100 · 空间适配与竞品设计信号强</span>
+          <span>图片评分：90 / 100 · IFA 现场展陈，信息量高</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">3</div>
+        <div>
+          <div class="kicker sans">家庭具身智能 · 智能硬件入口 · 用户趋势</div>
+          <h2>家用机器人未必先做人形，“机器人脑”可能更早落地</h2>
+        </div>
+      </div>
+      <p class="dek">与其让一个昂贵人形机器包办家务，不如先让 AI 调度家里已有的机器。</p>
+      <figure class="news-photo">
+        <img class="robot-focus" src="images/lg_cloid_dishwasher.jpg" alt="LG CLOiD 家用机器人场景">
+        <figcaption class="caption sans">图源：The Verge / LG，CLOiD 代表带机械臂的移动式家庭机器人方向。</figcaption>
+      </figure>
+      <div class="story-content">
+        <p>The Verge 9 月 2 日发布分析称，全尺寸人形机器人进入家庭仍然困难：家庭环境复杂、楼梯普遍、成本高，且通用型设备很难把多件事都做好。更现实的路径可能是“robot brain”：用 AI 智能体调度扫地机、洗衣机、洗碗机、割草机等已有设备。</p>
+        <p>文章提到，Tuya 的 Doova 面向独居老人，强调陪伴、紧急协助和智能家居控制，可联动灯光、窗帘以及厨房和浴室设备；LG CLOiD 则走带手臂的轮式路线，展示过从冰箱取物、装载洗衣机、控制烤箱等动作，并计划用约 10 万小时训练数据强化机器人基础模型。</p>
+        <div class="brief-box"><b>小编有话说</b>家庭具身智能的近期机会，可能不是“万能管家”，而是移动传感器、家庭中控和局部机械能力的组合。厨房里最先落地的会是调度、提醒、监测和少量高频动作。</div>
+        <div class="meta-grid">
+          <span>来源：The Verge · 2026-09-02 11:00 UTC</span>
+          <span>新闻评分：90 / 100 · 家庭机器人路径判断清晰</span>
+          <span>图片评分：88 / 100 · 家庭机器人产品图，场景明确</span>
+        </div>
+      </div>
+    </article>
+
+    <footer class="footer sans">
+      今日看点：LG 把 Agent 放进厨房，三星继续压缩家电嵌入边界，家庭机器人先从“机器人脑”开始。
+      <br>
+      资料来源：LG Global Newsroom、Samsung Global Newsroom、The Verge。编辑判断基于公开信息整理，仅用于内部情报沉淀。
+    </footer>
+  </main>
+</body>
+</html>
