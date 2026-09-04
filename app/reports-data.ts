@@ -18,6 +18,43 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-09-04",
+    "weekday": "星期五",
+    "issue": "第 051 期",
+    "title": "AI未来厨房新闻报",
+    "summary": "今天的主线是“AI 正在从单品智能走向空间化体验”：冰箱、烤箱、门锁和陪伴机器人被放进同一套家庭场景，厨电的竞争点开始从硬件参数转向感知、记忆和跨设备协同。",
+    "hero": "archive/2026-09-04/images/tcl_smart_fridge_booth.jpg",
+    "reportUrl": "archive/2026-09-04/",
+    "tags": [
+      "具身智能",
+      "厨房智能硬件",
+      "厨房空间设计",
+      "厨房品类创新",
+      "大模型算法"
+    ],
+    "articles": [
+      {
+        "title": "TCL 在 IFA 2026 把冰箱、门锁和陪伴机器人放进一个 AI 家庭场景",
+        "tags": [
+          "具身智能",
+          "厨房智能硬件"
+        ]
+      },
+      {
+        "title": "Siemens iQ700 烤箱继续升级：识别百种菜肴，并记住用户自己的菜谱",
+        "tags": [
+          "大模型算法"
+        ]
+      },
+      {
+        "title": "36氪探访北京亦庄：机器人 4S 店把“家庭具身智能”搬到可体验现场",
+        "tags": [
+          "具身智能"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-09-03",
     "weekday": "星期四",
     "issue": "第 050 期",

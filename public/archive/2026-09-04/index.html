@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI未来厨房新闻报 - 2026-09-04</title>
+  <style>
+    :root {
+      --paper: #f4ecd9;
+      --paper-dark: #ddcfad;
+      --ink: #17120f;
+      --muted: #675d50;
+      --rule: #211c17;
+      --red: #9a201d;
+      --wash: rgba(255,255,255,0.38);
+    }
+
+    * { box-sizing: border-box; }
+    html { scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255,255,255,0.52), transparent 24rem),
+        linear-gradient(135deg, #cbb88e 0%, #f8f1e0 45%, #cdbb92 100%);
+      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar { display: none; }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .page {
+      width: min(1060px, calc(100vw - 28px));
+      margin: 24px auto;
+      padding: 34px 44px 40px;
+      background:
+        linear-gradient(rgba(255,255,255,0.17), rgba(0,0,0,0.018)),
+        repeating-linear-gradient(90deg, rgba(48,38,24,0.028) 0 1px, transparent 1px 6px),
+        var(--paper);
+      border: 1px solid rgba(36,28,18,0.48);
+      box-shadow: 0 26px 68px rgba(39,30,18,0.24);
+    }
+
+    .sans {
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .masthead {
+      padding: 20px 0 18px;
+      text-align: center;
+      border-bottom: 3px solid var(--rule);
+    }
+
+    .masthead h1 {
+      margin: 0;
+      font-size: clamp(42px, 7.6vw, 82px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .issue-line {
+      padding: 12px 0 15px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .editor-note {
+      margin: 18px 0 26px;
+      padding: 16px 18px;
+      border-left: 7px solid var(--red);
+      background: var(--wash);
+      color: #2b231c;
+      font-size: 20px;
+      line-height: 1.62;
+      font-weight: 700;
+    }
+
+    .source-strip {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(33,28,23,0.45);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.58;
+      font-weight: 400;
+    }
+
+    .story {
+      padding: 30px 0 32px;
+      border-top: 3px solid var(--rule);
+    }
+
+    .story:first-of-type { padding-top: 24px; }
+
+    .story-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .rank {
+      width: 62px;
+      height: 62px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--rule);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .kicker {
+      margin: 2px 0 8px;
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(31px, 4.1vw, 48px);
+      line-height: 1.13;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 930px;
+      margin: 16px 0 18px;
+      font-size: 22px;
+      line-height: 1.48;
+      font-weight: 900;
+      color: #302820;
+    }
+
+    .news-photo {
+      margin: 0 0 16px;
+      border: 2px solid var(--rule);
+      background: var(--paper-dark);
+    }
+
+    .news-photo img {
+      display: block;
+      width: 100%;
+      height: clamp(300px, 42vw, 455px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .news-photo .siemens-focus { object-position: center 50%; }
+    .news-photo .tcl-focus { object-position: center 50%; }
+    .news-photo .robot-focus { object-position: center 50%; }
+
+    .caption {
+      padding: 9px 11px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      background: rgba(244,236,217,0.88);
+    }
+
+    .story-content {
+      display: block;
+      max-width: 930px;
+      margin-top: 18px;
+    }
+
+    .story-content p {
+      margin: 0 0 13px;
+      font-size: 21px;
+      line-height: 1.66;
+      font-weight: 600;
+    }
+
+    .brief-box {
+      margin-top: 14px;
+      border-left: 7px solid var(--red);
+      padding: 13px 16px;
+      background: var(--wash);
+      font-size: 18px;
+      line-height: 1.62;
+      color: #312820;
+      font-weight: 600;
+    }
+
+    .brief-box b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--red);
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .meta span {
+      border: 1px solid rgba(33,28,23,0.35);
+      padding: 4px 8px;
+      background: rgba(255,255,255,0.18);
+    }
+
+    .footer {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100vw - 16px, 640px);
+        margin: 8px auto;
+        padding: 22px 16px 28px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 12px;
+      }
+
+      .masthead h1 {
+        font-size: clamp(34px, 11.2vw, 48px);
+        white-space: normal;
+      }
+
+      .issue-line {
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .editor-note {
+        font-size: 17px;
+        padding: 13px 12px;
+      }
+
+      .story-head {
+        grid-template-columns: 48px 1fr;
+        gap: 12px;
+      }
+
+      .rank {
+        width: 48px;
+        height: 48px;
+        font-size: 23px;
+      }
+
+      h2 {
+        font-size: clamp(27px, 8vw, 34px);
+      }
+
+      .dek {
+        font-size: 19px;
+      }
+
+      .news-photo img {
+        height: clamp(230px, 62vw, 330px);
+      }
+
+      .story-content p {
+        font-size: 18px;
+        line-height: 1.62;
+      }
+
+      .brief-box {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="topbar sans">
+        <div>AI DAILY · 智能厨电 / 具身智能 / 空间设计</div>
+        <div>2026年9月4日 · 星期五</div>
+      </div>
+      <section class="masthead">
+        <h1>AI未来厨房新闻报</h1>
+      </section>
+      <div class="issue-line sans">总第 051 期 · 覆盖 9 月 4 日公开资讯与最近 24 小时有效线索</div>
+      <section class="editor-note">
+        今天的主线是“AI 正在从单品智能走向空间化体验”：冰箱、烤箱、门锁和陪伴机器人被放进同一套家庭场景，厨电的竞争点开始从硬件参数转向感知、记忆和跨设备协同。
+        <div class="source-strip sans">检索方向：厨房智能硬件、具身智能、大模型算法、厨房空间设计、厨房品类创新、厨房工业设计、AI技术趋势、用户趋势、设计趋势、国家政策、竞品动态。排序参考：相关性、时效性、可落地性、前瞻性、配图真实性。</div>
+      </section>
+    </header>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">1</div>
+        <div>
+          <div class="kicker sans">厨房智能硬件 / 厨房空间设计 / 竞品动态</div>
+          <h2>TCL 在 IFA 2026 把冰箱、门锁和陪伴机器人放进一个 AI 家庭场景</h2>
+        </div>
+      </div>
+      <p class="dek">TCL 以 “Inspired by Life, Powered by AI” 为主题展示 AI 生活方案，其中 Free Built-in Refrigerator 强调齐平嵌入、灵活储鲜与湿度控制，NXTHOME 则把家电、智能显示、门锁和家庭陪伴机器人整合成空间体验。</p>
+      <figure class="news-photo">
+        <img class="tcl-focus" src="images/tcl_smart_fridge_booth.jpg" alt="TCL 智能冰箱及机器人展示场景">
+        <figcaption class="caption sans">配图：TCL 智能冰箱与机器人演示资料图，能同时体现“厨房硬件 + 空间体验 + 家庭机器人”方向。图片评分：84/100。</figcaption>
+      </figure>
+      <section class="story-content">
+        <p>这条新闻的价值不在于某一个家电新品，而在于 TCL 正在把厨房硬件放到完整家庭空间里表达：冰箱不只是储鲜单体，而是和家居风格、智能门锁、屏幕入口、陪伴机器人共同组成一个 AI 生活界面。</p>
+        <p>对厨电产品定义来说，齐平嵌入、储鲜控制和跨设备联动会继续变成高端厨房的基础能力。未来用户感知到的“智能”，可能不是一个 App 功能，而是空间里多个设备能否自然接力。</p>
+        <div class="brief-box"><b>小编有话说</b>TCL 这次给出的方向很明确：AI 家电不能只讲参数，要讲空间关系。厨房硬件如果不能进入家庭场景叙事，很容易被用户看成孤立单品。</div>
+        <div class="meta sans">
+          <span>来源：EQS News / PRNewswire</span>
+          <span>日期：2026-09-03 18:50 CET</span>
+          <span>新闻分：91</span>
+          <span><a href="https://www.eqs-news.com/news/corporate/inspired-by-life-powered-by-ai-tcl-redefines-everyday-experiences-at-ifa-2026/e1050bd7-0097-407b-a814-b10a46d19dde_en">原文链接</a></span>
+        </div>
+      </section>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">2</div>
+        <div>
+          <div class="kicker sans">AI 厨具新交互 / 厨房工业设计 / 大模型算法</div>
+          <h2>Siemens iQ700 烤箱继续升级：识别百种菜肴，并记住用户自己的菜谱</h2>
+        </div>
+      </div>
+      <p class="dek">Siemens 在 IFA 展前发布中展示 iQ700 烤箱的菜肴识别能力，可自动识别一百多种菜并推荐设置；今年新增保存用户常用菜谱的能力，让烤箱下次直接启动对应程序。</p>
+      <figure class="news-photo">
+        <img class="siemens-focus" src="images/siemens_ifa_booth.jpg" alt="Siemens IFA 2026 展区">
+        <figcaption class="caption sans">配图：Siemens Home Appliances IFA 2026 官方展区图，展示其智能家电与设计语言。图片评分：80/100。</figcaption>
+      </figure>
+      <section class="story-content">
+        <p>烤箱从“预设菜单”进化到“识别食物 + 记忆个人菜谱”，是 AI 厨电比较务实的一步：它没有直接替用户烹饪全部流程，但可以减少判断火候、模式、时间的认知负担。</p>
+        <p>这类能力落地的关键在数据闭环：识别菜品只是第一步，更重要的是能否沉淀家庭口味、用户偏好和高频菜谱，并把它稳定映射到温控、湿度、蒸汽和烘烤曲线。</p>
+        <div class="brief-box"><b>小编有话说</b>厨房 AI 的有效切入点不是炫技，而是把“每次都要重新设置”变成“设备懂我的习惯”。这比单纯语音控制更接近真实价值。</div>
+        <div class="meta sans">
+          <span>来源：Siemens Home Appliances</span>
+          <span>日期：2026-09-02，IFA 期间持续传播</span>
+          <span>新闻分：88</span>
+          <span><a href="https://press.siemens-home.bsh-group.com/pressreleases/at-ifa-siemens-is-showcasing-smart-technology-iconic-design-and-precise-functionality-to-create-a-compelling-experience-3462738">原文链接</a></span>
+        </div>
+      </section>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">3</div>
+        <div>
+          <div class="kicker sans">具身智能 / 用户趋势 / AI技术趋势</div>
+          <h2>36氪探访北京亦庄：机器人 4S 店把“家庭具身智能”搬到可体验现场</h2>
+        </div>
+      </div>
+      <p class="dek">36氪 9 月 4 日报道，北京经开区集中展示自动驾驶、机器人商场、北京人形机器人创新中心等高端智能制造成果，其中机器人 4S 店把具身智能从实验室叙事带到消费级体验空间。</p>
+      <figure class="news-photo">
+        <img class="robot-focus" src="images/robot_mall_36kr_3.jpg" alt="北京亦庄机器人体验场景">
+        <figcaption class="caption sans">配图：36氪报道中的亦庄机器人体验场景，真实现场、信息量高，优于宣传海报与虚拟 Logo。图片评分：90/100。</figcaption>
+      </figure>
+      <section class="story-content">
+        <p>机器人 4S 店的意义，是让用户第一次可以像看汽车、看家电一样理解机器人：能不能导览、陪伴、递送、协作，现场体验比参数表更容易建立信任。</p>
+        <p>对未来厨房和家庭场景来说，机器人不一定马上进入每个家庭，但“可展示、可试用、可维护”的零售形态会提前影响用户认知，也会倒逼硬件团队重视可靠性、售后和场景脚本。</p>
+        <div class="brief-box"><b>小编有话说</b>具身智能要真正进入家庭，光有发布会不够，必须有可试、可修、可复购的渠道模型。机器人 4S 店是一个值得跟踪的落地信号。</div>
+        <div class="meta sans">
+          <span>来源：36氪</span>
+          <span>日期：2026-09-04</span>
+          <span>新闻分：86</span>
+          <span><a href="https://eu.36kr.com/en/p/3968317634900485">原文链接</a></span>
+        </div>
+      </section>
+    </article>
+
+    <footer class="footer sans">
+      今日看点：TCL 把 AI 家庭做成空间方案，西门子烤箱开始记菜谱，机器人 4S 店验证家庭具身智能入口。
+    </footer>
+  </main>
+</body>
+</html>
