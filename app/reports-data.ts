@@ -18,6 +18,42 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-09-05",
+    "weekday": "星期六",
+    "issue": "第 052 期",
+    "title": "AI未来厨房新闻报",
+    "summary": "今天的主线是“AI 家庭硬件开始从能联网，转向能理解、能协同、能执行”：厨房侧强调冰箱、烤箱和食材上下文联动；家务侧出现双机协作形态；设计侧继续把 AI 藏进更自然的嵌入式家电里。",
+    "hero": "archive/2026-09-05/images/hisense_companion_living_3.jpg",
+    "reportUrl": "archive/2026-09-05/",
+    "tags": [
+      "具身智能",
+      "厨房智能硬件",
+      "厨房空间设计",
+      "厨房工业设计",
+      "设计趋势"
+    ],
+    "articles": [
+      {
+        "title": "Hisense 发布 AI Companion Suite：厨房开始按食材、口味和设备协同出菜",
+        "tags": [
+          "厨房智能硬件"
+        ]
+      },
+      {
+        "title": "iRobot Roomba Duo 亮相：一台家务机器人开始携带另一台机器人",
+        "tags": [
+          "具身智能"
+        ]
+      },
+      {
+        "title": "Samsung IFA 获奖家电：AI 冰箱把视觉识别和极窄嵌入缝隙放到同一张牌上",
+        "tags": [
+          "厨房智能硬件"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-09-04",
     "weekday": "星期五",
     "issue": "第 051 期",

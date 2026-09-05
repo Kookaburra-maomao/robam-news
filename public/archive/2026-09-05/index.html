@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI未来厨房新闻报 - 2026-09-05</title>
+  <style>
+    :root {
+      --paper: #f4ecd9;
+      --paper-dark: #ddcfad;
+      --ink: #17120f;
+      --muted: #675d50;
+      --rule: #211c17;
+      --red: #9a201d;
+      --wash: rgba(255,255,255,0.38);
+    }
+
+    * { box-sizing: border-box; }
+    html { scrollbar-width: none; }
+    html::-webkit-scrollbar { display: none; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 18% 8%, rgba(255,255,255,0.52), transparent 24rem),
+        linear-gradient(135deg, #cbb88e 0%, #f8f1e0 45%, #cdbb92 100%);
+      font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
+      scrollbar-width: none;
+    }
+
+    body::-webkit-scrollbar { display: none; }
+
+    a {
+      color: inherit;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+
+    .page {
+      width: min(1060px, calc(100vw - 28px));
+      margin: 24px auto;
+      padding: 34px 44px 40px;
+      background:
+        linear-gradient(rgba(255,255,255,0.17), rgba(0,0,0,0.018)),
+        repeating-linear-gradient(90deg, rgba(48,38,24,0.028) 0 1px, transparent 1px 6px),
+        var(--paper);
+      border: 1px solid rgba(36,28,18,0.48);
+      box-shadow: 0 26px 68px rgba(39,30,18,0.24);
+    }
+
+    .sans {
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      letter-spacing: 0;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .masthead {
+      padding: 20px 0 18px;
+      text-align: center;
+      border-bottom: 3px solid var(--rule);
+    }
+
+    .masthead h1 {
+      margin: 0;
+      font-size: clamp(42px, 7.6vw, 82px);
+      line-height: 1;
+      font-weight: 900;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
+    .issue-line {
+      padding: 12px 0 15px;
+      border-bottom: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    .editor-note {
+      margin: 18px 0 26px;
+      padding: 16px 18px;
+      border-left: 7px solid var(--red);
+      background: var(--wash);
+      color: #2b231c;
+      font-size: 20px;
+      line-height: 1.62;
+      font-weight: 700;
+    }
+
+    .source-strip {
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid rgba(33,28,23,0.45);
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.58;
+      font-weight: 400;
+    }
+
+    .story {
+      padding: 30px 0 32px;
+      border-top: 3px solid var(--rule);
+    }
+
+    .story:first-of-type { padding-top: 24px; }
+
+    .story-head {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 16px;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .rank {
+      width: 62px;
+      height: 62px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--rule);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.3);
+      font-size: 30px;
+      line-height: 1;
+      font-weight: 900;
+    }
+
+    .kicker {
+      margin: 2px 0 8px;
+      color: var(--red);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    h2 {
+      margin: 0;
+      font-size: clamp(31px, 4.1vw, 48px);
+      line-height: 1.13;
+      letter-spacing: 0;
+    }
+
+    .dek {
+      max-width: 930px;
+      margin: 16px 0 18px;
+      font-size: 22px;
+      line-height: 1.48;
+      font-weight: 900;
+      color: #302820;
+    }
+
+    .news-photo {
+      margin: 0 0 16px;
+      border: 2px solid var(--rule);
+      background: var(--paper-dark);
+    }
+
+    .news-photo img {
+      display: block;
+      width: 100%;
+      height: clamp(300px, 42vw, 455px);
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .news-photo .hisense-focus { object-position: center 50%; }
+    .news-photo .roomba-focus { object-position: center 50%; }
+    .news-photo .samsung-focus { object-position: center 50%; }
+
+    .caption {
+      padding: 9px 11px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.5;
+      background: rgba(244,236,217,0.88);
+    }
+
+    .story-content {
+      display: block;
+      max-width: 930px;
+      margin-top: 18px;
+    }
+
+    .story-content p {
+      margin: 0 0 13px;
+      font-size: 21px;
+      line-height: 1.66;
+      font-weight: 600;
+    }
+
+    .brief-box {
+      margin-top: 14px;
+      border-left: 7px solid var(--red);
+      padding: 13px 16px;
+      background: var(--wash);
+      font-size: 18px;
+      line-height: 1.62;
+      color: #312820;
+      font-weight: 600;
+    }
+
+    .brief-box b {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--red);
+      font-family: Arial, "Noto Sans SC", sans-serif;
+      font-size: 15px;
+      letter-spacing: 0;
+    }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .meta span {
+      border: 1px solid rgba(33,28,23,0.35);
+      padding: 4px 8px;
+      background: rgba(255,255,255,0.18);
+    }
+
+    .footer {
+      margin-top: 16px;
+      padding-top: 16px;
+      border-top: 4px double var(--rule);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.6;
+      text-align: center;
+      font-weight: 700;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100vw - 16px, 640px);
+        margin: 8px auto;
+        padding: 22px 16px 28px;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 5px;
+        font-size: 12px;
+      }
+
+      .masthead h1 {
+        font-size: clamp(34px, 11.2vw, 48px);
+        white-space: normal;
+      }
+
+      .issue-line {
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .editor-note {
+        font-size: 17px;
+        padding: 13px 12px;
+      }
+
+      .story-head {
+        grid-template-columns: 48px 1fr;
+        gap: 12px;
+      }
+
+      .rank {
+        width: 48px;
+        height: 48px;
+        font-size: 23px;
+      }
+
+      h2 {
+        font-size: clamp(27px, 8vw, 34px);
+      }
+
+      .dek {
+        font-size: 19px;
+      }
+
+      .news-photo img {
+        height: clamp(230px, 62vw, 330px);
+      }
+
+      .story-content p {
+        font-size: 18px;
+        line-height: 1.62;
+      }
+
+      .brief-box {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header>
+      <div class="topbar sans">
+        <div>AI DAILY · 智能厨电 / 具身智能 / 工业设计</div>
+        <div>2026年9月5日 · 星期六</div>
+      </div>
+      <section class="masthead">
+        <h1>AI未来厨房新闻报</h1>
+      </section>
+      <div class="issue-line sans">总第 052 期 · 覆盖 9 月 5 日公开资讯与最近 24 小时有效线索</div>
+      <section class="editor-note">
+        今天的主线是“AI 家庭硬件开始从能联网，转向能理解、能协同、能执行”：厨房侧强调冰箱、烤箱和食材上下文联动；家务侧出现双机协作形态；设计侧继续把 AI 藏进更自然的嵌入式家电里。
+        <div class="source-strip sans">检索方向：厨房智能硬件、具身智能、大模型算法、厨房空间设计、厨房品类创新、厨房工业设计、AI技术趋势、用户趋势、设计趋势、国家政策、竞品动态。排序参考：相关性、时效性、可落地性、前瞻性、配图真实性。</div>
+      </section>
+    </header>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">1</div>
+        <div>
+          <div class="kicker sans">厨房智能硬件 / 大模型算法 / 竞品动态</div>
+          <h2>Hisense 发布 AI Companion Suite：厨房开始按食材、口味和设备协同出菜</h2>
+        </div>
+      </div>
+      <p class="dek">Hisense 在 IFA 2026 展示 V AIOS 与 AI Companion Suite，把 AI 能力落到 Cooking、Laundry、Air &amp; Energy 三类日常场景。厨房部分强调识别个人饮食偏好、现有食材和环境上下文，并协同冰箱、烤箱等设备给出菜品建议与烹饪引导。</p>
+      <figure class="news-photo">
+        <img class="hisense-focus" src="images/hisense_companion_living_3.jpg" alt="Hisense AI Companion Suite 发布现场">
+        <figcaption class="caption sans">配图：Hisense IFA 2026 发布现场，画面中包含 AI Companion Suite 与多类家电硬件。图片评分：82/100。</figcaption>
+      </figure>
+      <section class="story-content">
+        <p>这条新闻对智能厨房的启发比较直接：AI 不再只是语音入口，而是把“冰箱里有什么、家人爱吃什么、烤箱能做什么”组合起来，给用户一个可执行的晚餐方案。</p>
+        <p>如果这类能力继续成熟，厨房系统的竞争点会从单机参数转到跨设备编排：冰箱负责食材认知，烤箱负责烹饪执行，屏幕或语音入口负责解释和确认，最终形成一条完整任务链。</p>
+        <div class="brief-box"><b>小编有话说</b>厨房 AI 最值得跟踪的是“上下文”。谁能把食材、偏好、设备能力和时间约束连起来，谁就更接近真正有用的厨房智能体。</div>
+        <div class="meta sans">
+          <span>来源：PRNewswire / Hisense</span>
+          <span>日期：2026-09-04</span>
+          <span>新闻分：91</span>
+          <span><a href="https://www.prnewswire.com/apac/news-releases/hisense-perkenal-companion-living-berkuasa-ai-pada-ifa-2026-302869834.html">原文链接</a></span>
+        </div>
+      </section>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">2</div>
+        <div>
+          <div class="kicker sans">具身智能 / 用户趋势 / 厨房品类创新</div>
+          <h2>iRobot Roomba Duo 亮相：一台家务机器人开始携带另一台机器人</h2>
+        </div>
+      </div>
+      <p class="dek">The Verge 9 月 4 日报道，iRobot 在 IFA 2026 展示 Roomba Duo 概念机：主机负责大面积洗地和清扫，还能通过机械臂放下更小的 Roomba，进入桌底、边角等狭窄空间完成补充清洁。</p>
+      <figure class="news-photo">
+        <img class="roomba-focus" src="images/irobot_roomba_duo.jpg" alt="iRobot Roomba Duo 概念机">
+        <figcaption class="caption sans">配图：The Verge 拍摄的 Roomba Duo 现场实机照片，设备结构和机械臂清晰可见。图片评分：91/100。</figcaption>
+      </figure>
+      <section class="story-content">
+        <p>Roomba Duo 的产品逻辑很有意思：它没有追求人形机器人，而是把“母舰 + 子机”的协作关系放进地面清洁任务里，让不同尺寸的机器人分别处理不同空间。</p>
+        <p>对未来厨房和家庭清洁来说，这种形态比单一全能机器人更现实。厨房地面、餐桌下方、柜体边角和开放式客餐厨区域，本来就是多尺度、多障碍的复杂空间。</p>
+        <div class="brief-box"><b>小编有话说</b>家务机器人未必先做人形。更可落地的方向，可能是多个专用硬件围绕家庭空间协作，把一个任务拆成更稳定的执行单元。</div>
+        <div class="meta sans">
+          <span>来源：The Verge</span>
+          <span>日期：2026-09-04 12:53 UTC</span>
+          <span>新闻分：89</span>
+          <span><a href="https://www.theverge.com/tech/990045/irobot-roomba-duo-concept-robot-vacuum">原文链接</a></span>
+        </div>
+      </section>
+    </article>
+
+    <article class="story">
+      <div class="story-head">
+        <div class="rank">3</div>
+        <div>
+          <div class="kicker sans">厨房工业设计 / 设计趋势 / 厨房空间设计</div>
+          <h2>Samsung IFA 获奖家电：AI 冰箱把视觉识别和极窄嵌入缝隙放到同一张牌上</h2>
+        </div>
+      </div>
+      <p class="dek">Samsung 9 月 4 日宣布多款家电获得 IFA Innovation Awards 2026 荣誉，其中 Bespoke AI Refrigerator Family Hub 强调 32 英寸屏、食材管理、联网厨房能力与内部摄像头识别；另一款 Bespoke AI Refrigerator 强调每侧 4mm 的安装缝隙。</p>
+      <figure class="news-photo">
+        <img class="samsung-focus" src="images/samsung_awards_6.jpg" alt="Samsung Bespoke AI Refrigerator Family Hub">
+        <figcaption class="caption sans">配图：Samsung 官方 Bespoke AI Refrigerator Family Hub 产品图，突出厨房屏幕入口与冰箱形态。图片评分：78/100。</figcaption>
+      </figure>
+      <section class="story-content">
+        <p>这条新闻的重点，是 AI 功能和工业设计正在合并表达：一边用内部摄像头识别食材、推荐食谱，一边把冰箱做得更适合嵌入式厨房空间。</p>
+        <p>对高端厨电来说，未来的“智能感”不一定外露。用户更容易感知的是空间更齐平、操作更少、食材管理更省心，AI 变成隐藏在产品体验背后的能力。</p>
+        <div class="brief-box"><b>小编有话说</b>AI 厨电的下一步不是把屏幕越做越大，而是让识别、推荐、开门和空间适配一起服务于少打扰、低学习成本的厨房体验。</div>
+        <div class="meta sans">
+          <span>来源：Samsung Global Newsroom</span>
+          <span>日期：2026-09-04</span>
+          <span>新闻分：86</span>
+          <span><a href="https://news.samsung.com/global/samsung-wins-multiple-honors-at-ifa-innovation-awards-2026">原文链接</a></span>
+        </div>
+      </section>
+    </article>
+
+    <footer class="footer sans">
+      今日看点：海信让厨房会协同，Roomba变双机母舰，三星用AI重做嵌入式家电。
+    </footer>
+  </main>
+</body>
+</html>
