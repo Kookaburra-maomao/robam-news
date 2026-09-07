@@ -18,6 +18,47 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-09-07",
+    "weekday": "星期一",
+    "issue": "",
+    "title": "AI未来厨房新闻报",
+    "summary": "澳柯玛让烟灶更主动，美的将洗净、烘干与储存串成完整流程；IFA现场观察家电竞争向整屋空间和持续服务延伸。",
+    "hero": "archive/2026-09-07/images/aucma_ai_kitchen.png",
+    "reportUrl": "archive/2026-09-07/",
+    "tags": [
+      "厨房智能硬件",
+      "竞品动态",
+      "厨房品类创新",
+      "厨房空间设计",
+      "用户趋势",
+      "AI技术趋势"
+    ],
+    "articles": [
+      {
+        "title": "电博会观察：澳柯玛让烟机“看见”烹饪，烟灶协同再进一步",
+        "tags": [
+          "厨房智能硬件",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "美的 GreenApex：把洗净、烘干与储存接成一条流程",
+        "tags": [
+          "厨房品类创新",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "IFA 现场观察：家电竞争延伸到整屋空间与持续服务",
+        "tags": [
+          "厨房空间设计",
+          "用户趋势",
+          "AI技术趋势"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-09-05",
     "weekday": "星期六",
     "issue": "第 052 期",
