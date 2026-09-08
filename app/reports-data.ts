@@ -18,6 +18,51 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-09-08",
+    "weekday": "星期二",
+    "issue": "",
+    "title": "AI未来厨房新闻报",
+    "summary": "美的烤箱挑战350℃，Miele让厨房变形，AI硬件出海补齐品牌与仓配。",
+    "hero": "archive/2026-09-08/images/midea_oven_ifa.webp",
+    "reportUrl": "archive/2026-09-08/",
+    "tags": [
+      "厨房智能硬件",
+      "厨房品类创新",
+      "竞品动态",
+      "厨房空间设计",
+      "厨房工业设计",
+      "设计趋势",
+      "AI技术趋势",
+      "用户趋势"
+    ],
+    "articles": [
+      {
+        "title": "美的 SpaceMaster：350℃高温烤箱走上 IFA 烹饪台",
+        "tags": [
+          "厨房智能硬件",
+          "厨房品类创新",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "Miele × 海蒂诗：一套厨房家具，切换做饭、用餐与办公",
+        "tags": [
+          "厨房空间设计",
+          "厨房工业设计",
+          "设计趋势"
+        ]
+      },
+      {
+        "title": "36氪出海观察：AI硬件出海，开始补齐品牌与本地仓配",
+        "tags": [
+          "AI技术趋势",
+          "竞品动态",
+          "用户趋势"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-09-07",
     "weekday": "星期一",
     "issue": "",
