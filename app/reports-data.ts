@@ -18,6 +18,51 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-09-09",
+    "weekday": "星期三",
+    "issue": "",
+    "title": "AI未来厨房新闻报",
+    "summary": "冷冻柜向内增容，小厨房原地焕新，机器人把倒液变成可复用技能。",
+    "hero": "archive/2026-09-09/images/liebherr_blurox.webp",
+    "reportUrl": "archive/2026-09-09/",
+    "tags": [
+      "厨房品类创新",
+      "厨房工业设计",
+      "竞品动态",
+      "厨房空间设计",
+      "用户趋势",
+      "设计趋势",
+      "具身智能",
+      "AI技术趋势"
+    ],
+    "articles": [
+      {
+        "title": "利勃海尔 BluRoX：把冷冻柜的空间，向内多要一点",
+        "tags": [
+          "厨房品类创新",
+          "厨房工业设计",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "长沙宜家：5—7平方米小厨房，也能原地焕新",
+        "tags": [
+          "厨房空间设计",
+          "用户趋势",
+          "设计趋势",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "GRID：让机器人倒液，从一次演示走向可复用技能",
+        "tags": [
+          "具身智能",
+          "AI技术趋势"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-09-08",
     "weekday": "星期二",
     "issue": "",
