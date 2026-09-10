@@ -18,6 +18,45 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-09-10",
+    "weekday": "星期四",
+    "issue": "",
+    "title": "AI未来厨房新闻报",
+    "summary": "海尔把AI接进整屋，36氪追问硬科技落地，IFA证明厨房智能正进大众视野。",
+    "hero": "archive/2026-09-10/images/haier_ai_home.jpg",
+    "reportUrl": "archive/2026-09-10/",
+    "tags": [
+      "厨房智能硬件",
+      "竞品动态",
+      "AI技术趋势",
+      "用户趋势",
+      "具身智能"
+    ],
+    "articles": [
+      {
+        "title": "海尔 IFA 展台：AI 不只控制设备，而是理解家庭场景",
+        "tags": [
+          "厨房智能硬件",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "36氪 IFA 复盘：硬科技落地，要回答比“AI”更细的问题",
+        "tags": [
+          "AI技术趋势",
+          "用户趋势"
+        ]
+      },
+      {
+        "title": "24万观众看见AI与机器人：厨房智能开始进入大众展会叙事",
+        "tags": [
+          "用户趋势",
+          "具身智能"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-09-09",
     "weekday": "星期三",
     "issue": "",
