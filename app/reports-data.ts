@@ -18,6 +18,48 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-10-27",
+    "weekday": "星期二",
+    "issue": "",
+    "title": "AI未来厨房新闻报",
+    "summary": "LG冰箱换上智能抽屉，食神牵手京东，腾讯同传边听边译：厨房AI如何接上行动？",
+    "hero": "archive/2026-10-27/preview.png",
+    "reportUrl": "archive/2026-10-27/",
+    "tags": [
+      "厨房智能硬件",
+      "厨房工业设计",
+      "竞品动态",
+      "厨房品类创新",
+      "AI技术趋势",
+      "大模型算法"
+    ],
+    "articles": [
+      {
+        "title": "LG 把冷冻室改成抽屉，让 AI 跟着备餐节奏调温",
+        "tags": [
+          "厨房智能硬件",
+          "厨房工业设计",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "食神拟接入 JoyInside，菜谱、语音与厨电执行有望接通",
+        "tags": [
+          "厨房智能硬件",
+          "厨房品类创新",
+          "AI技术趋势"
+        ]
+      },
+      {
+        "title": "腾讯开源 Hy-SimulMT：边听边译，缩短语音等待",
+        "tags": [
+          "大模型算法",
+          "AI技术趋势"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-10-26",
     "weekday": "星期一",
     "issue": "",
