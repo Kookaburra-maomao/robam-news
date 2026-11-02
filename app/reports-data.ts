@@ -18,6 +18,47 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-11-02",
+    "weekday": "星期一",
+    "issue": "",
+    "title": "AI未来厨房新闻报",
+    "summary": "炒菜机国标实施，刀与砧板协同切配，DeepSeek探索多任务助手。",
+    "hero": "archive/2026-11-02/preview.png",
+    "reportUrl": "archive/2026-11-02/",
+    "tags": [
+      "厨房智能硬件",
+      "国家政策",
+      "厨房品类创新",
+      "厨房工业设计",
+      "设计趋势",
+      "AI技术趋势"
+    ],
+    "articles": [
+      {
+        "title": "商用智能炒菜机国标实施，设备比较有了共同参照",
+        "tags": [
+          "厨房智能硬件",
+          "国家政策",
+          "厨房品类创新"
+        ]
+      },
+      {
+        "title": "NUO：让刀与砧板一起引导切配动作",
+        "tags": [
+          "厨房工业设计",
+          "设计趋势",
+          "厨房品类创新"
+        ]
+      },
+      {
+        "title": "DeepSeek开放研究原型，把多任务交给系统协调",
+        "tags": [
+          "AI技术趋势"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-10-30",
     "weekday": "星期五",
     "issue": "",
