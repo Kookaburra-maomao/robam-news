@@ -18,6 +18,49 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-11-03",
+    "weekday": "星期二",
+    "issue": "",
+    "title": "AI未来厨房新闻报",
+    "summary": "咖啡机借鉴跑车设计，机器人实景应考，LongCat升级视觉任务。",
+    "hero": "archive/2026-11-03/preview.png",
+    "reportUrl": "archive/2026-11-03/",
+    "tags": [
+      "厨房工业设计",
+      "厨房智能硬件",
+      "设计趋势",
+      "竞品动态",
+      "具身智能",
+      "AI技术趋势",
+      "大模型算法"
+    ],
+    "articles": [
+      {
+        "title": "从“鸭尾”到杯架，咖啡机延续跑车的设计语言",
+        "tags": [
+          "厨房工业设计",
+          "厨房智能硬件",
+          "设计趋势",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "清洁、叠衣与补货，机器人将走进真实场景应考",
+        "tags": [
+          "具身智能",
+          "AI技术趋势"
+        ]
+      },
+      {
+        "title": "LongCat-2.5上线，让视觉输入接入长程任务",
+        "tags": [
+          "大模型算法",
+          "AI技术趋势"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-11-02",
     "weekday": "星期一",
     "issue": "",
