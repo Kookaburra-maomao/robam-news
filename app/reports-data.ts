@@ -18,6 +18,51 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-11-13",
+    "weekday": "星期五",
+    "issue": "",
+    "title": "AI未来厨房新闻报",
+    "summary": "IFR公布制造业机器人密度；Runway开放机器人动作模型；Serve让配送机器人可由API调用。",
+    "hero": "archive/2026-11-13/preview.png",
+    "reportUrl": "archive/2026-11-13/",
+    "tags": [
+      "国家政策",
+      "AI技术趋势",
+      "具身智能",
+      "用户趋势",
+      "大模型算法",
+      "厨房品类创新"
+    ],
+    "articles": [
+      {
+        "title": "IFR公布2025机器人密度：中国升至193台/万人",
+        "tags": [
+          "国家政策",
+          "AI技术趋势",
+          "具身智能",
+          "用户趋势"
+        ]
+      },
+      {
+        "title": "Runway开放Praxis-1，视频模型迈向机器人动作控制",
+        "tags": [
+          "大模型算法",
+          "AI技术趋势",
+          "具身智能"
+        ]
+      },
+      {
+        "title": "Serve开放机器人配送API，机器人网络成为可调用服务",
+        "tags": [
+          "具身智能",
+          "厨房品类创新",
+          "用户趋势",
+          "AI技术趋势"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-11-12",
     "weekday": "星期四",
     "issue": "",
