@@ -18,6 +18,54 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-11-14",
+    "weekday": "星期六",
+    "issue": "",
+    "title": "AI未来厨房新闻报",
+    "summary": "商用烹饪机器人先落餐饮；CUCKOO演示语音咖啡机；Apple家庭AI屏开售。",
+    "hero": "archive/2026-11-14/preview.png",
+    "reportUrl": "archive/2026-11-14/",
+    "tags": [
+      "具身智能",
+      "厨房品类创新",
+      "用户趋势",
+      "竞品动态",
+      "厨房智能硬件",
+      "AI技术趋势",
+      "大模型算法",
+      "厨房空间设计"
+    ],
+    "articles": [
+      {
+        "title": "CUCKOO 携 BOTINKIT 展示商用烹饪机器人，餐厅场景先于家庭厨房",
+        "tags": [
+          "具身智能",
+          "厨房品类创新",
+          "用户趋势",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "CUCKOO 展示 AI Barista 净水机：一句话启动咖啡萃取",
+        "tags": [
+          "厨房智能硬件",
+          "厨房品类创新",
+          "AI技术趋势",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "Apple HomeView 开售：Siri AI 把家庭管理带到一块共享屏上",
+        "tags": [
+          "大模型算法",
+          "厨房空间设计",
+          "AI技术趋势",
+          "用户趋势"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-11-13",
     "weekday": "星期五",
     "issue": "",
