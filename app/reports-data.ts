@@ -18,6 +18,60 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-11-16",
+    "weekday": "星期一",
+    "issue": "",
+    "title": "AI未来厨房新闻报",
+    "summary": "厨房充电藏进抽屉，AI开始参与食品新品构思，机器人触觉模型开放代码：看三条技术如何走近厨房。",
+    "hero": "archive/2026-11-16/preview.png",
+    "reportUrl": "archive/2026-11-16/",
+    "tags": [
+      "厨房智能硬件",
+      "厨房空间设计",
+      "厨房品类创新",
+      "厨房工业设计",
+      "用户趋势",
+      "设计趋势",
+      "竞品动态",
+      "大模型算法",
+      "AI技术趋势",
+      "具身智能"
+    ],
+    "articles": [
+      {
+        "title": "给手机留个抽屉：Fabuwood × FreePower InFocus Drawer 今日开始供货",
+        "tags": [
+          "厨房智能硬件",
+          "厨房空间设计",
+          "厨房品类创新",
+          "厨房工业设计",
+          "用户趋势",
+          "设计趋势",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "从消费洞察到新品概念：IFF 发布食品饮料生成式 AI 工具",
+        "tags": [
+          "大模型算法",
+          "厨房品类创新",
+          "AI技术趋势",
+          "用户趋势",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "机器人学会“用手感知”：Robbyant 开源 LingBot-Touch",
+        "tags": [
+          "具身智能",
+          "大模型算法",
+          "AI技术趋势",
+          "用户趋势"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-11-14",
     "weekday": "星期六",
     "issue": "",
