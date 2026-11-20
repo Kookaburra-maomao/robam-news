@@ -18,6 +18,57 @@ export const archiveStartDate = "2026-08-24";
 
 export const reports: NewsReport[] = [
   {
+    "date": "2026-11-20",
+    "weekday": "星期五",
+    "issue": "",
+    "title": "AI未来厨房新闻报",
+    "summary": "XPENG预告实体AI演示，GPT-Live拓展实时语音接入，机器人数据链能否迁移到厨房？",
+    "hero": "archive/2026-11-20/preview.png",
+    "reportUrl": "archive/2026-11-20/",
+    "tags": [
+      "具身智能",
+      "AI技术趋势",
+      "用户趋势",
+      "竞品动态",
+      "厨房智能硬件",
+      "厨房品类创新",
+      "大模型算法",
+      "设计趋势",
+      "厨房工业设计"
+    ],
+    "articles": [
+      {
+        "title": "XPENG 11月25日亮出实体 AI 进展，IRON 将现场展示",
+        "tags": [
+          "具身智能",
+          "AI技术趋势",
+          "用户趋势",
+          "竞品动态"
+        ]
+      },
+      {
+        "title": "GPT-Live 1.1 接入 AI Gateway，免手操作语音更易嵌入应用",
+        "tags": [
+          "厨房智能硬件",
+          "厨房品类创新",
+          "大模型算法",
+          "AI技术趋势",
+          "用户趋势",
+          "设计趋势"
+        ]
+      },
+      {
+        "title": "Toborlife 预告展示 Unitree G1 数据链：遥操作、采集与管理一站演示",
+        "tags": [
+          "具身智能",
+          "厨房工业设计",
+          "AI技术趋势",
+          "竞品动态"
+        ]
+      }
+    ]
+  },
+  {
     "date": "2026-11-19",
     "weekday": "星期四",
     "issue": "",
